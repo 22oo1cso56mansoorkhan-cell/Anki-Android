@@ -129,7 +129,7 @@
     <string name="empty_cram_label" maxLength="28">Vaciar</string>
     <string name="create_subdeck">Crear submazo</string>
     <string name="empty_filtered_deck">Vaciando mazo filtrado</string>
-    <string name="search_deck" comment="Deck search for selecting it">Buscar mazo</string>
+    <string name="search_deck" comment="Deck search for selecting it">Deck search</string>
     <string name="empty_deck">Este mazo está vacío</string>
     <string name="invalid_deck_name">Nombre de mazo inválido</string>
     <string name="studyoptions_congrats_finished">¡Felicitaciones! Has finalizado este mazo por ahora.</string>
@@ -144,7 +144,6 @@
     <string name="syncing_media">Sincronizando archivos multimedia</string>
     <string name="export_deck" maxLength="28">Exportar mazo</string>
     <string name="export_collection">Exportar colección</string>
-    <string name="nothing">Nada</string>
     <!-- Card template editor -->
     <string name="title_activity_template_editor">Tipos de tarjeta</string>
     <string name="card_template_editor_front">Plantilla del anverso</string>

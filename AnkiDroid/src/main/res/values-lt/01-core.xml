@@ -135,7 +135,7 @@
     <string name="empty_cram_label" maxLength="28">Išvalyti</string>
     <string name="create_subdeck">Kurkite vidinį rinkinį</string>
     <string name="empty_filtered_deck">Išvalomas filtruotas rinkinys&#8230;</string>
-    <string name="search_deck" comment="Deck search for selecting it">Rinkinio paieška</string>
+    <string name="search_deck" comment="Deck search for selecting it">Deck search</string>
     <string name="empty_deck">Šis rinkinys yra tuščias</string>
     <string name="invalid_deck_name">Blogas rinkinio vardas</string>
     <string name="studyoptions_congrats_finished">Sveikiname! Jūs šiandienai jau baigėte.</string>
@@ -150,7 +150,6 @@
     <string name="syncing_media">Įrašai sinchronizuojami</string>
     <string name="export_deck" maxLength="28">Eksportuoti rinkinį</string>
     <string name="export_collection">Eksportuoti kolekciją</string>
-    <string name="nothing">Nieko</string>
     <!-- Card template editor -->
     <string name="title_activity_template_editor">Kortelių tipai</string>
     <string name="card_template_editor_front">Priekinė pusė</string>

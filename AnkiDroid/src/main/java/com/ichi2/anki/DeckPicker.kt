@@ -173,6 +173,8 @@ import com.ichi2.anki.utils.Destination
 import com.ichi2.anki.utils.ShortcutUtils
 import com.ichi2.anki.utils.ext.dismissAllDialogFragments
 import com.ichi2.anki.utils.ext.getSizeOfBitmapFromCollection
+import com.ichi2.anki.utils.ext.launchCollectionInLifecycleScope
+import com.ichi2.anki.utils.ext.positionIsVisible
 import com.ichi2.anki.utils.ext.setFragmentResultListener
 import com.ichi2.anki.utils.ext.showDialogFragment
 import com.ichi2.anki.utils.runWithOOMCheck
@@ -783,6 +785,12 @@ open class DeckPicker :
 
         fun onFocusedDeckChanged(deckId: DeckId?) {
             val position = deckId?.let { viewModel.findDeckPosition(it) } ?: 0
+
+            // Skip centering if the deck is already on screen.
+            // Scrolling during a tap animation causes deck labels to overlap on older devices.
+            if (decksLayoutManager.positionIsVisible(position)) {
+                return
+            }
             // HACK: a small delay is required before scrolling works
             deckPickerBinding.decks.postDelayed({
                 decksLayoutManager.scrollToPositionWithOffset(position, deckPickerBinding.decks.height / 2)
@@ -804,6 +812,9 @@ open class DeckPicker :
                 }
 
                 is StartupResponse.Success -> {
+                    // Set flowOfStartupResponse to null after handling so it isn't re-emitted on resume.
+                    // Must stay here: clearing in ViewModel would break cold start (collector is only active at RESUMED).
+                    viewModel.flowOfStartupResponse.value = null
                     showStartupScreensAndDialogs(sharedPrefs(), 0)
 
                     if (tryShowStudyOptionsPanel()) {

@@ -129,7 +129,7 @@
     <string name="empty_cram_label" maxLength="28">Walang laman</string>
     <string name="create_subdeck">Create subdeck</string>
     <string name="empty_filtered_deck">Emptying filtered deck&#8230;</string>
-    <string name="search_deck" comment="Deck search for selecting it">Deck Search</string>
+    <string name="search_deck" comment="Deck search for selecting it">Deck search</string>
     <string name="empty_deck">Walang laman ang deck na ito</string>
     <string name="invalid_deck_name">Invalid deck name</string>
     <string name="studyoptions_congrats_finished">Congratulations! You have finished for today.</string>
@@ -144,7 +144,6 @@
     <string name="syncing_media">Syncing media</string>
     <string name="export_deck" maxLength="28">I-eksport ang deck</string>
     <string name="export_collection">Export collection</string>
-    <string name="nothing">Wala</string>
     <!-- Card template editor -->
     <string name="title_activity_template_editor">Mga uri ng baraha</string>
     <string name="card_template_editor_front">Harap na template</string>

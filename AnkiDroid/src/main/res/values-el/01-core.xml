@@ -129,7 +129,7 @@
     <string name="empty_cram_label" maxLength="28">Άδειασμα</string>
     <string name="create_subdeck">Δημιουργία υποτράπουλας</string>
     <string name="empty_filtered_deck">Άδειασμα φιλτραρισμένης τράπουλας&#8230;</string>
-    <string name="search_deck" comment="Deck search for selecting it">Αναζήτηση</string>
+    <string name="search_deck" comment="Deck search for selecting it">Deck search</string>
     <string name="empty_deck">Αυτή η τράπουλα είναι κενή</string>
     <string name="invalid_deck_name">Μη έγκυρο όνομα</string>
     <string name="studyoptions_congrats_finished">Συγχαρητήρια! Τελειώσατε για σήμερα.</string>
@@ -144,7 +144,6 @@
     <string name="syncing_media">Συγχρονισμός πολυμέσων</string>
     <string name="export_deck" maxLength="28">Εξαγωγή τράπουλας</string>
     <string name="export_collection">Εξαγωγή συλλογής</string>
-    <string name="nothing">Τίποτε</string>
     <!-- Card template editor -->
     <string name="title_activity_template_editor">Τύποι κάρτας</string>
     <string name="card_template_editor_front">Μπροστινό πρότυπο</string>

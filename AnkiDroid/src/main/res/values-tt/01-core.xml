@@ -126,7 +126,7 @@
     <string name="empty_cram_label" maxLength="28">Бушату</string>
     <string name="create_subdeck">Колода эчендә колода ясау</string>
     <string name="empty_filtered_deck">Фильтрлы колода бушатыла&#8230;</string>
-    <string name="search_deck" comment="Deck search for selecting it">Колода эзләү</string>
+    <string name="search_deck" comment="Deck search for selecting it">Deck search</string>
     <string name="empty_deck">Бу колода буш</string>
     <string name="invalid_deck_name">Шундый колода исеме була алмый</string>
     <string name="studyoptions_congrats_finished">Congratulations! You have finished for today.</string>
@@ -141,7 +141,6 @@
     <string name="syncing_media">Syncing media</string>
     <string name="export_deck" maxLength="28">Колоданы экспортлау</string>
     <string name="export_collection">Export collection</string>
-    <string name="nothing">Берни</string>
     <!-- Card template editor -->
     <string name="title_activity_template_editor">Кәрт төрләре</string>
     <string name="card_template_editor_front">Алгы шаблон</string>

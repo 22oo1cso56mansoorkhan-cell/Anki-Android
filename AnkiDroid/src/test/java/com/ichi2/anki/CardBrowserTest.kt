@@ -76,6 +76,7 @@ import com.ichi2.anki.browser.FindAndReplaceDialogFragment.Companion.TAGS_AS_FIE
 import com.ichi2.anki.browser.column1
 import com.ichi2.anki.browser.selectRowAtPosition
 import com.ichi2.anki.browser.setColumn
+import com.ichi2.anki.browser.setSelectedDeck
 import com.ichi2.anki.browser.toRowSelection
 import com.ichi2.anki.common.time.TimeManager
 import com.ichi2.anki.common.utils.isRunningAsUnitTest
@@ -101,6 +102,7 @@ import com.ichi2.anki.utils.ext.showDialogFragment
 import com.ichi2.testutils.IntentAssert
 import com.ichi2.testutils.common.Flaky
 import com.ichi2.testutils.common.OS
+import com.ichi2.testutils.ext.menu
 import com.ichi2.testutils.getSharedPrefs
 import com.ichi2.testutils.withSplitPaneUiAsync
 import io.mockk.every
@@ -205,6 +207,18 @@ class CardBrowserTest : RobolectricTest() {
             // Assert again: the deck selection should not change
             assertEquals(deckId, this.lastDeckId)
         }
+
+    @Test
+    fun `can select deck with escaped name - issue 20279`() {
+        val deckId = addDeck("test\\s")
+        withBrowser(noteCount = 1) {
+            val selectableDeck = SelectableDeck.Deck(deckId, "test\\s")
+
+            this.onDeckSelected(selectableDeck)
+
+            assertDoesNotThrow { advanceRobolectricLooper() }
+        }
+    }
 
     @Test
     @Flaky(os = OS.WINDOWS, "Index 0 out of bounds for length 0")
@@ -810,7 +824,11 @@ class CardBrowserTest : RobolectricTest() {
         // Kill and restart the activity and ensure that display order is preserved
         val outBundle = Bundle()
         cardBrowserController.saveInstanceState(outBundle)
-        cardBrowserController.pause().stop().destroy()
+        cardBrowserController.pause().stop()
+        // fix Robolectric bug with launchCollectionInLifecycleScope
+        // method running after onStart without context
+        advanceRobolectricLooper()
+        cardBrowserController.destroy()
         cardBrowserController =
             Robolectric
                 .buildActivity(CardBrowser::class.java)
@@ -1232,7 +1250,7 @@ class CardBrowserTest : RobolectricTest() {
     @Test
     @Ignore(
         "issues with launchCollectionInLifecycleScope - provided value is not current" +
-            "use an integration test",
+            " use an integration test",
     )
     fun `column text is updated - cardsOrNotes and column change`() {
         addBasicAndReversedNote("Hello", "World")
@@ -1545,7 +1563,7 @@ class CardBrowserTest : RobolectricTest() {
                     R.id.action_search_by_flag to true,
                     // true due to 'add note'
                     R.id.action_undo to true,
-                    R.id.action_preview to true,
+                    R.id.action_preview_many to true,
                     R.id.action_select_all to true,
                     R.id.action_open_options to true,
                     R.id.action_create_filtered_deck to true,
@@ -1579,7 +1597,7 @@ class CardBrowserTest : RobolectricTest() {
                     R.id.action_edit_tags to true,
                     R.id.action_grade_now to true,
                     R.id.action_reset_cards_progress to true,
-                    R.id.action_preview to true,
+                    R.id.action_preview_many to true,
                     R.id.action_export_selected to true,
                     R.id.action_undo to true,
                     R.id.action_find_replace to false,
@@ -1609,7 +1627,7 @@ class CardBrowserTest : RobolectricTest() {
                     R.id.action_search_by_flag to true,
                     // true due to 'add note'
                     R.id.action_undo to true,
-                    R.id.action_preview to true,
+                    R.id.action_preview_many to false,
                     R.id.action_select_all to true,
                     R.id.action_open_options to true,
                     R.id.action_create_filtered_deck to true,
@@ -1653,7 +1671,7 @@ class CardBrowserTest : RobolectricTest() {
                     R.id.action_edit_tags to true,
                     R.id.action_grade_now to true,
                     R.id.action_reset_cards_progress to true,
-                    R.id.action_preview to true,
+                    R.id.action_preview_many to false,
                     R.id.action_export_selected to true,
                     R.id.action_undo to true,
                     R.id.action_find_replace to false,
@@ -1882,7 +1900,7 @@ fun CardBrowser.getVisibleRows() =
 val CardBrowser.isShowingSelectAll: Boolean
     get() {
         advanceRobolectricLooper()
-        return actionBarMenu?.findItem(R.id.action_select_all)?.isVisible == true
+        return this.menu().findItem(R.id.action_select_all)?.isVisible == true
     }
 
 val CardBrowser.columnHeadingViews

@@ -129,7 +129,7 @@
     <string name="empty_cram_label" maxLength="28">Tyhjä</string>
     <string name="create_subdeck">Luo johdannais pakka</string>
     <string name="empty_filtered_deck">Tyhjennetään suodatettu pakka&#8230;</string>
-    <string name="search_deck" comment="Deck search for selecting it">Hae pakkaa</string>
+    <string name="search_deck" comment="Deck search for selecting it">Deck search</string>
     <string name="empty_deck">Tämä pakka on tyhjä</string>
     <string name="invalid_deck_name">Virheellinen pakan nimi</string>
     <string name="studyoptions_congrats_finished">Onnittelut! Homma hoidettu tämän päivän osalta.</string>
@@ -144,7 +144,6 @@
     <string name="syncing_media">Synkronoidaan mediaa</string>
     <string name="export_deck" maxLength="28">Vie pakka</string>
     <string name="export_collection">Vie kokoelma</string>
-    <string name="nothing">Ei mitään</string>
     <!-- Card template editor -->
     <string name="title_activity_template_editor">Korttityyppi</string>
     <string name="card_template_editor_front">Etumalli</string>

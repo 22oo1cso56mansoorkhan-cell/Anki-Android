@@ -120,7 +120,6 @@
     <string name="close">ବନ୍ଦ</string>
     <string name="select">ବାଛନ୍ତୁ</string>
     <string name="field_remapping">%1$s (“%2$s” ରୁ)</string>
-    <string name="confirm_map_cards_to_nothing">କୌଣସି ଜିନିଷକୁ ମ୍ୟାପ୍ ନହୋଇ ଥିବା ପତ୍ରସବୁ ବିଲୋପ ହେବ। ଯଦି କୌଣସି ନୋଟ୍ ର ଅବଶିଷ୍ଟ ପତ୍ର ନଥାଏ, ତେବେ ଏହା ନଷ୍ଟ ହୋଇଯିବ। ଆପଣ ଜାରି ରଖିବାକୁ ଚାହୁଁଛନ୍ତି କି?</string>
     <string name="missing_note_type">କୌଣସି ନୋଟ୍ ପ୍ରକାର ମିଳିଲା ନାହିଁ</string>
     <string name="card_previewer_empty_front_indicator" comment="Extra text appended onto a tab title in the card previewer so that the user can see at a glance whether a card has no front.">%1$s (ଖାଲି)</string>
     <!-- Image cropper -->
@@ -193,6 +192,7 @@
     <string name="dyn_deck_desc">ସାଧାରଣ କାର୍ଯ୍ୟସୂଚୀ ବାହାରେ ଅଧ୍ୟୟନ ପାଇଁ ଏହା ଏକ ସ୍ୱତନ୍ତ୍ର କେରୀ। ଆପଣ ସମୀକ୍ଷା କରିବା ପରେ ପତ୍ରଗୁଡ଼ିକ ଆପେ ସେଗୁଡ଼ିକର ମୂଳ କେରୀକୁ ଫେରି ଆସିବେ। କେରୀ ତାଲିକାରୁ ଏହି କେରୀ ବିଲୋପ କରିବା ସମସ୍ତ ଅବଶିଷ୍ଟ ପତ୍ରଗୁଡ଼ିକୁ ସେମାନଙ୍କର ମୂଳ କେରୀକୁ ଫେରାଇବ।</string>
     <string name="tag_editor_add_feedback">“%1$s” କୁ ଯୋଡ଼ିବା ପାଇଁ “%2$s” ଦବାନ୍ତୁ</string>
     <string name="tag_editor_add_feedback_existing">ଵିଦ୍ୟମାନ ଟ୍ୟାଗ୍ “%1$s” ଚୟନ କରାଯାଇଛି</string>
+    <string name="tag_already_exists">Tag already exists</string>
     <!-- Time spans -->
     <!-- Currently only used if exporting APKG fails -->
     <string name="apk_share_error">apkg ଫାଇଲ୍ ଅଂଶୀଦାର କରିବାରେ ତ୍ରୁଟି</string>
@@ -238,20 +238,20 @@
     <!-- A Menu item to change the Font Size (currently in the Note Editor) -->
     <string name="menu_font_size" maxLength="28">ଫଣ୍ଟ ଆକାର</string>
     <string name="menu_show_toolbar" comment="Checkable item stating whether the note editor toolbar should be shown" maxLength="28">ଉପକରଣ-ଦଣ୍ଡିକା ଦେଖାଇବା</string>
-    <string name="format_insert_bold">ଅକ୍ଷରକୁ ଗାଢ଼ କରନ୍ତୁ</string>
-    <string name="format_insert_italic">ଇଟାଲିକ୍ ଭାବରେ ଫର୍ମାଟ୍ କରନ୍ତୁ</string>
-    <string name="format_insert_underline">ଲେଖା ତଳେ ଗାର ଦିଅନ୍ତୁ</string>
-    <string name="insert_horizontal_line">ଭୂସମାନ୍ତର ଗାର ସନ୍ନିବେଶ କରନ୍ତୁ</string>
-    <string name="insert_heading">ଶୀର୍ଷଲେଖ ସନ୍ନିବେଶ କରନ୍ତୁ</string>
-    <string name="format_font_size">ଫଣ୍ଟ ଆକାର ପରିବର୍ତ୍ତନ କରିବା</string>
-    <string name="insert_mathjax">MathJax ସମୀକରଣ ସନ୍ନିବେଶ କରନ୍ତୁ</string>
+    <string name="format_insert_bold">Format as bold</string>
+    <string name="format_insert_italic">Format as italic</string>
+    <string name="format_insert_underline">Format as underline</string>
+    <string name="insert_horizontal_line">Insert horizontal line</string>
+    <string name="insert_heading">Insert heading</string>
+    <string name="format_font_size">Change font size</string>
+    <string name="insert_mathjax">Insert MathJax equation</string>
     <string name="note_editor_toolbar_icon">ବଟନ୍ ର ନା‍ଁ</string>
-    <string name="before_text">ଚୟନ ପୂର୍ବର HTML</string>
-    <string name="after_text">ଚୟନ ପରର HTML</string>
-    <string name="add_toolbar_item">ଉପକରଣ-ଦଣ୍ଡିକାର ଆଇଟମ୍ ସୃଷ୍ଟି କରିବା</string>
-    <string name="edit_toolbar_item">ଉପକରଣ-ଦଣ୍ଡିକା ସମ୍ପାଦନା</string>
+    <string name="before_text">HTML before selection</string>
+    <string name="after_text">HTML after selection</string>
+    <string name="add_toolbar_item">Create toolbar item</string>
+    <string name="edit_toolbar_item">Edit toolbar item</string>
     <string name="toolbar_item_explain_edit_or_remove">ମନୋନୀତ ପାଠ୍ୟ ପୂର୍ବରୁ ଏବଂ ପରେ ସନ୍ନିବେଶ କରିବା ଲାଗି HTML ପ୍ରବେଶ କରନ୍ତୁ\n\nଗୋଟିଏ ଉପକରଣ-ଦଣ୍ଡିକାର ଆଇଟମ୍ କୁ ସମ୍ପାଦନ ବା ହଟାଇବା ପାଇଁ ତା\' ଉପରେ ଲମ୍ବା ସ୍ପର୍ଶ କରନ୍ତୁ</string>
-    <string name="remove_toolbar_item">ଉପକରଣ-ଦଣ୍ଡିକାର ଆଇଟମ୍ ହଟାଇବେ?</string>
+    <string name="remove_toolbar_item">Remove toolbar item?</string>
     <string name="note_editor_image_too_large">The image is too large, please insert the image manually</string>
     <string name="note_editor_video_too_large">ଵିଡ଼ିଓ ଫାଇଲ୍‌ଟି ଅତ୍ୟଧିକ ବଡ଼ ଅଟେ, ଦୟାକରି ହସ୍ତକୃତ ଭାବେ ଵିଡ଼ିଓଟିକୁ ସନ୍ନିବେଶ କରନ୍ତୁ</string>
     <string name="note_editor_audio_too_large">ଅଡ଼ିଓ ଫାଇଲ୍‌ଟି ଅତ୍ୟଧିକ ବଡ଼ ଅଟେ, ଦୟାକରି ହସ୍ତକୃତ ଭାବେ ଅଡ଼ିଓଟିକୁ ସନ୍ନିବେଶ କରନ୍ତୁ</string>
@@ -357,7 +357,7 @@
     <string name="start_recording">Record</string>
     <string name="stop_recording">Stop</string>
     <string name="play_recording">ଚାଳନ କରିବା</string>
-    <string name="next_recording" comment="Description of a button to go to the next recording">Next</string>
+    <string name="next_recording" comment="Description of a button to go to the next recording">ପରବର୍ତ୍ତୀ</string>
     <!--  AlertDialog in the deleteCardTemplate  -->
     <string name="orphan_note_title">Cannot Delete Card Type</string>
     <string name="orphan_note_message">Deleting this card type will leave some notes without any cards.</string>

@@ -129,7 +129,7 @@
     <string name="empty_cram_label" maxLength="28">Bosh</string>
     <string name="create_subdeck">Krijoni nëndeck</string>
     <string name="empty_filtered_deck">Po zbrazni kuvertën e filtruar&#8230;</string>
-    <string name="search_deck" comment="Deck search for selecting it">Kërkimi i kuvertës</string>
+    <string name="search_deck" comment="Deck search for selecting it">Deck search</string>
     <string name="empty_deck">Kjo kuvertë është bosh</string>
     <string name="invalid_deck_name">Emër i pavlefshëm kuvertë</string>
     <string name="studyoptions_congrats_finished">Congratulations! You have finished for today.</string>
@@ -144,7 +144,6 @@
     <string name="syncing_media">Media po sinkronizohet</string>
     <string name="export_deck" maxLength="28">Kuvertë eksporti</string>
     <string name="export_collection">Export collection</string>
-    <string name="nothing">Asgjë</string>
     <!-- Card template editor -->
     <string name="title_activity_template_editor">Llojet e kartave</string>
     <string name="card_template_editor_front">Modeli i përparmë</string>

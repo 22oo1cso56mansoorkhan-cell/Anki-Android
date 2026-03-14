@@ -120,7 +120,6 @@
     <string name="close">ಹತ್ತಿರ</string>
     <string name="select">ಆರಿಸಿ</string>
     <string name="field_remapping">%1$s (“%2$s” ನಿಂದ)</string>
-    <string name="confirm_map_cards_to_nothing">ಯಾವುದಕ್ಕೂ ಮ್ಯಾಪ್ ಮಾಡದ ಯಾವುದೇ ಕಾರ್ಡ್‌ಗಳನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ. ಟಿಪ್ಪಣಿಯಲ್ಲಿ ಉಳಿದ ಕಾರ್ಡ್‌ಗಳಿಲ್ಲದಿದ್ದರೆ, ಅದು ಕಳೆದುಹೋಗುತ್ತದೆ. ನೀವು ಮುಂದುವರಿಯಲು ಖಚಿತವಾಗಿ ಬಯಸುವಿರಾ?</string>
     <string name="missing_note_type">ಯಾವುದೇ ಟಿಪ್ಪಣಿ ಪ್ರಕಾರ ಕಂಡುಬಂದಿಲ್ಲ</string>
     <string name="card_previewer_empty_front_indicator" comment="Extra text appended onto a tab title in the card previewer so that the user can see at a glance whether a card has no front.">%1$s (empty)</string>
     <!-- Image cropper -->
@@ -193,6 +192,7 @@
     <string name="dyn_deck_desc">ಸಾಮಾನ್ಯ ವೇಳಾಪಟ್ಟಿಯ ಹೊರಗೆ ಅಧ್ಯಯನ ಮಾಡಲು ಇದು ವಿಶೇಷ ಡೆಕ್ ಆಗಿದೆ. ನೀವು ಅವುಗಳನ್ನು ಪರಿಶೀಲಿಸಿದ ನಂತರ ಕಾರ್ಡ್‌ಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಅವುಗಳ ಮೂಲ ಡೆಕ್‌ಗಳಿಗೆ ಹಿಂತಿರುಗಿಸಲಾಗುತ್ತದೆ. ಡೆಕ್ ಪಟ್ಟಿಯಿಂದ ಈ ಡೆಕ್ ಅನ್ನು ಅಳಿಸುವುದರಿಂದ ಉಳಿದ ಎಲ್ಲಾ ಕಾರ್ಡ್‌ಗಳನ್ನು ಅವುಗಳ ಮೂಲ ಡೆಕ್‌ಗೆ ಹಿಂತಿರುಗಿಸುತ್ತದೆ.</string>
     <string name="tag_editor_add_feedback">“%1$s” ಸೇರಿಸುವುದನ್ನು ಖಚಿತಪಡಿಸಲು “%2$s” ಸ್ಪರ್ಶಿಸಿ</string>
     <string name="tag_editor_add_feedback_existing">ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಟ್ಯಾಗ್ “%1$s” ಆಯ್ಕೆ ಮಾಡಲಾಗಿದೆ</string>
+    <string name="tag_already_exists">Tag already exists</string>
     <!-- Time spans -->
     <!-- Currently only used if exporting APKG fails -->
     <string name="apk_share_error">ಎಪಿಕೆಜಿ ಫೈಲ್ ಹಂಚುವಲ್ಲಿ ದೋಷ</string>
@@ -238,20 +238,20 @@
     <!-- A Menu item to change the Font Size (currently in the Note Editor) -->
     <string name="menu_font_size" maxLength="28">ಫಾಂಟ್ ಗಾತ್ರ</string>
     <string name="menu_show_toolbar" comment="Checkable item stating whether the note editor toolbar should be shown" maxLength="28">ಉಪಕರಣಪಟ್ಟಿ ಪ್ರದರ್ಶಿಸಿ</string>
-    <string name="format_insert_bold">ದಪ್ಪವಾಗಿ ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಿ</string>
-    <string name="format_insert_italic">ಇಟಾಲಿಕ್ ಆಗಿ ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಿ</string>
-    <string name="format_insert_underline">ಅಂಡರ್ಲೈನ್ ​​ಆಗಿ ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಿ</string>
-    <string name="insert_horizontal_line">ಅಡ್ಡ ರೇಖೆಯನ್ನು ಸೇರಿಸಿ</string>
-    <string name="insert_heading">ಶಿರೋನಾಮೆ ಸೇರಿಸಿ</string>
-    <string name="format_font_size">ಫಾಂಟ್ ಗಾತ್ರವನ್ನು ಬದಲಾಯಿಸಿ</string>
-    <string name="insert_mathjax">ಮ್ಯಾಥ್‌ಜಾಕ್ಸ್ ಸಮೀಕರಣವನ್ನು ಸೇರಿಸಿ</string>
+    <string name="format_insert_bold">Format as bold</string>
+    <string name="format_insert_italic">Format as italic</string>
+    <string name="format_insert_underline">Format as underline</string>
+    <string name="insert_horizontal_line">Insert horizontal line</string>
+    <string name="insert_heading">Insert heading</string>
+    <string name="format_font_size">Change font size</string>
+    <string name="insert_mathjax">Insert MathJax equation</string>
     <string name="note_editor_toolbar_icon">ಬಟನ್ ಪಠ್ಯ</string>
-    <string name="before_text">ಆಯ್ಕೆಗೆ ಮೊದಲು HTML</string>
-    <string name="after_text">ಆಯ್ಕೆಯ ನಂತರ HTML</string>
-    <string name="add_toolbar_item">ಟೂಲ್‌ಬಾರ್ ಐಟಂ ರಚಿಸಿ</string>
-    <string name="edit_toolbar_item">ಪರಿಕರಪಟ್ಟಿ ಐಟಂ ಅನ್ನು ಸಂಪಾದಿಸಿ</string>
+    <string name="before_text">HTML before selection</string>
+    <string name="after_text">HTML after selection</string>
+    <string name="add_toolbar_item">Create toolbar item</string>
+    <string name="edit_toolbar_item">Edit toolbar item</string>
     <string name="toolbar_item_explain_edit_or_remove">ಆಯ್ಕೆಮಾಡಿದ ಪಠ್ಯದ ಮೊದಲು ಮತ್ತು ನಂತರ ಸೇರಿಸಲು HTML ಅನ್ನು ನಮೂದಿಸಿ\n\nಎಡಿಟ್ ಮಾಡಲು ಅಥವಾ ತೆಗೆದುಹಾಕಲು ಟೂಲ್‌ಬಾರ್ ಐಟಂ ಅನ್ನು ದೀರ್ಘವಾಗಿ ಒತ್ತಿರಿ</string>
-    <string name="remove_toolbar_item">ಟೂಲ್‌ಬಾರ್ ಐಟಂ ಅನ್ನು ತೆಗೆದುಹಾಕುವುದೇ?</string>
+    <string name="remove_toolbar_item">Remove toolbar item?</string>
     <string name="note_editor_image_too_large">The image is too large, please insert the image manually</string>
     <string name="note_editor_video_too_large">The video file is too large, please insert the video manually</string>
     <string name="note_editor_audio_too_large">The audio file is too large, please insert the audio manually</string>

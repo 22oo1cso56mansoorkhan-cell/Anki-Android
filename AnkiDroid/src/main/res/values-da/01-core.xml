@@ -129,7 +129,7 @@
     <string name="empty_cram_label" maxLength="28">Tøm</string>
     <string name="create_subdeck">Opret understak</string>
     <string name="empty_filtered_deck">Tømmer filtreret stak&#8230;</string>
-    <string name="search_deck" comment="Deck search for selecting it">Staksøgning</string>
+    <string name="search_deck" comment="Deck search for selecting it">Deck search</string>
     <string name="empty_deck">Denne stak er tom</string>
     <string name="invalid_deck_name">Ugyldigt staknavn</string>
     <string name="studyoptions_congrats_finished">Congratulations! You have finished for today.</string>
@@ -144,7 +144,6 @@
     <string name="syncing_media">Synkroniserer medier</string>
     <string name="export_deck" maxLength="28">Eksportér stak</string>
     <string name="export_collection">Eksportér samling</string>
-    <string name="nothing">Intet</string>
     <!-- Card template editor -->
     <string name="title_activity_template_editor">Korttyper</string>
     <string name="card_template_editor_front">Forsideskabelon</string>

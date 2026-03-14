@@ -129,7 +129,7 @@
     <string name="empty_cram_label" maxLength="28">ᱵᱟ.ᱱᱩᱜᱼᱟ</string>
     <string name="create_subdeck">ᱥᱚᱵᱰᱮᱠ ᱛᱮᱭᱟᱨ ᱢᱮ</string>
     <string name="empty_filtered_deck">ᱯᱷᱤᱞᱴᱚᱨ ᱰᱮᱠ ᱠᱷᱟᱹᱞᱤᱜ ᱠᱟᱱᱟ&#8230;</string>
-    <string name="search_deck" comment="Deck search for selecting it">ᱰᱮᱠ ᱥᱮᱸᱫᱽᱨᱟ</string>
+    <string name="search_deck" comment="Deck search for selecting it">Deck search</string>
     <string name="empty_deck">ᱱᱚᱶᱟ ᱰᱮᱠ ᱫᱚ ᱠᱷᱟᱹᱞᱤ ᱜᱮᱭᱟ</string>
     <string name="invalid_deck_name">ᱰᱮᱠ ᱧᱩᱛᱩᱢ ᱵᱷᱩᱞ</string>
     <string name="studyoptions_congrats_finished">ᱥᱟᱨᱦᱟᱣ! ᱛᱮᱦᱮᱸᱧ ᱞᱟᱹᱜᱤᱫ ᱟᱢ ᱯᱩᱨᱟᱹᱣ ᱦᱩᱭᱠᱮᱜᱼᱟᱢ ᱾</string>
@@ -144,7 +144,6 @@
     <string name="syncing_media">ᱥᱤᱸᱠᱨᱚᱱᱥ ᱢᱮᱰᱤᱭᱟ</string>
     <string name="export_deck" maxLength="28">ᱰᱮᱠ ᱵᱷᱮᱡᱟᱭ ᱢᱮ</string>
     <string name="export_collection">ᱴᱩᱢᱟᱹᱞ ᱵᱷᱮᱡᱟᱭ ᱢᱮ</string>
-    <string name="nothing">ᱵᱟᱹᱱᱩᱜᱼᱟ</string>
     <!-- Card template editor -->
     <string name="title_activity_template_editor">ᱠᱟᱰ ᱨᱮᱭᱟᱜ ᱯᱨᱚᱠᱟᱨ</string>
     <string name="card_template_editor_front">ᱢᱟᱲᱟᱝ ᱪᱷᱟᱸᱪ</string>

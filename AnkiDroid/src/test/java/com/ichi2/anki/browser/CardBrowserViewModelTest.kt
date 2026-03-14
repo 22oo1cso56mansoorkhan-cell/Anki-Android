@@ -56,7 +56,7 @@ import com.ichi2.anki.browser.CardBrowserViewModel.Companion.STATE_MULTISELECT_V
 import com.ichi2.anki.browser.CardBrowserViewModel.RowSelection
 import com.ichi2.anki.browser.CardBrowserViewModel.ToggleSelectionState.SELECT_ALL
 import com.ichi2.anki.browser.CardBrowserViewModel.ToggleSelectionState.SELECT_NONE
-import com.ichi2.anki.browser.RepositionCardsRequest.ContainsNonNewCardsError
+import com.ichi2.anki.browser.RepositionCardsRequest.NoRepositionableCardsError
 import com.ichi2.anki.browser.RepositionCardsRequest.RepositionData
 import com.ichi2.anki.browser.search.SavedSearch
 import com.ichi2.anki.export.ExportDialogFragment
@@ -964,7 +964,17 @@ class CardBrowserViewModelTest : JvmTest() {
             assertThat("2 selected rows", selectedRows.size, equalTo(2))
 
             val repositionResult = prepareToRepositionCards()
-            assertInstanceOf<ContainsNonNewCardsError>(repositionResult, "new cards error")
+            assertInstanceOf<RepositionData>(repositionResult, "mixed selection should still return reposition data").apply {
+                val unsupported =
+                    assertInstanceOf<UnsupportedCardCount.Count>(
+                        unsupportedCardCount,
+                        "unsupported card count should be exact",
+                    )
+                assertThat("unsupported card count", unsupported.value, equalTo(1))
+            }
+
+            val count = repositionSelectedRows(position = 50, step = 1, shuffle = false, shift = false)
+            assertThat("only new cards should be repositioned", count, equalTo(1))
         }
     }
 
@@ -991,6 +1001,44 @@ class CardBrowserViewModelTest : JvmTest() {
                     ),
                 )
             }
+        }
+    }
+
+    @Test
+    fun `reposition - suspended new card`() {
+        addBasicNote("New").suspendAll()
+        addBasicNote("New")
+
+        runViewModelTest {
+            selectAll()
+
+            val cards = queryAllSelectedCardIds().map(col::getCard)
+            assertTrue("at least one card is suspended") { cards.any { it.queue == QueueType.Suspended } }
+            assertTrue("all suspended cards are still new type") {
+                cards.filter { it.queue == QueueType.Suspended }.all { it.type == CardType.New }
+            }
+
+            val repositionResult = prepareToRepositionCards()
+
+            // Should succeed because it's still a New card, even though suspended
+            assertInstanceOf<RepositionData>(repositionResult, "suspended new card should be repositionable").apply {
+                assertThat("queueTop", queueTop, equalTo(1))
+                assertThat("queueBottom", queueBottom, equalTo(2))
+            }
+        }
+    }
+
+    @Test
+    fun `reposition - all non new cards`() {
+        addRevBasicNoteDueToday("Review1", "Today")
+        addRevBasicNoteDueToday("Review2", "Today")
+
+        runViewModelTest {
+            selectAll()
+            assertThat("2 selected rows", selectedRows.size, equalTo(2))
+
+            val repositionResult = prepareToRepositionCards()
+            assertInstanceOf<NoRepositionableCardsError>(repositionResult, "all non-new cards error")
         }
     }
 
@@ -1137,10 +1185,11 @@ class CardBrowserViewModelTest : JvmTest() {
             val deckWithQuotes = addDeck("Test\"Quotes\"In\"Deck")
             setSelectedDeck(deckWithQuotes)
 
+            val searchString = requireNotNull(with(col) { searchRequestFlow.value.toSearchString() })
             assertThat(
                 "Quotes in deck name should be escaped with backslashes",
-                restrictOnDeck,
-                equalTo("deck:\"Test\\\"Quotes\\\"In\\\"Deck\""),
+                searchString.getOrThrow().value,
+                equalTo("deck:Test\\\"Quotes\\\"In\\\"Deck"),
             )
         }
 
@@ -1599,3 +1648,8 @@ suspend fun CardBrowserViewModel.saveSearch(
     title: String,
     query: String,
 ) = saveSearch(SavedSearch(title, query))
+
+suspend fun CardBrowserViewModel.setSelectedDeck(targetDid: DeckId) {
+    val deck = SelectableDeck.fromCollection(includeFiltered = false).single { it.deckId == targetDid }
+    setSelectedDeck(deck)
+}

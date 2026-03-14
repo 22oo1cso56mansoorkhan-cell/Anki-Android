@@ -129,7 +129,7 @@
     <string name="empty_cram_label" maxLength="28">Tøm</string>
     <string name="create_subdeck">Lag ein underkortleik</string>
     <string name="empty_filtered_deck">Tømmer filtrert kortstokk&#8230;</string>
-    <string name="search_deck" comment="Deck search for selecting it">Kortstokkssøk</string>
+    <string name="search_deck" comment="Deck search for selecting it">Deck search</string>
     <string name="empty_deck">Denne kortleiken er tom</string>
     <string name="invalid_deck_name">Ugildt namn på kortleik</string>
     <string name="studyoptions_congrats_finished">Gratulerer! Du er ferdig for i dag.</string>
@@ -144,7 +144,6 @@
     <string name="syncing_media">Synkroniserer medium</string>
     <string name="export_deck" maxLength="28">Før ut kortleiken</string>
     <string name="export_collection">Eksporter samling</string>
-    <string name="nothing">Ingenting</string>
     <!-- Card template editor -->
     <string name="title_activity_template_editor">Kortslag</string>
     <string name="card_template_editor_front">Framsidemal</string>

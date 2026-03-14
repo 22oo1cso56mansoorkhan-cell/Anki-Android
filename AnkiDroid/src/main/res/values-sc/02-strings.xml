@@ -122,7 +122,6 @@
     <string name="close">Serra</string>
     <string name="select">Seletziona</string>
     <string name="field_remapping">%1$s (dae “%2$s”)</string>
-    <string name="confirm_map_cards_to_nothing">Sas cartas chene connessiones s\'ant a iscantzellare. Si una nota non tenet prus cartas s\'at a pèrdere. Ses seguru de chèrrere sighire?</string>
     <string name="missing_note_type">Peruna casta de nota atzapada</string>
     <string name="card_previewer_empty_front_indicator" comment="Extra text appended onto a tab title in the card previewer so that the user can see at a glance whether a card has no front.">%1$s (empty)</string>
     <!-- Image cropper -->
@@ -195,6 +194,7 @@
     <string name="dyn_deck_desc">Custu est unu matzu ispetziale pro istudiare in foras de sa pranificatzione normale. Sas cartas ant a torrare in manera automàtica a sos matzos originales issoro a pustis chi las as a revisionare. Iscantzellende custu matzu dae sa lista de matzos at a fàghere torrare totu sas cartas chi abarrant a sos matzos originales issoro.</string>
     <string name="tag_editor_add_feedback">Toca “%2$s” pro cunfirmare s\'annanta de “%1$s”</string>
     <string name="tag_editor_add_feedback_existing">Eticheta chi esistit “%1$s” seletzionada</string>
+    <string name="tag_already_exists">Tag already exists</string>
     <!-- Time spans -->
     <!-- Currently only used if exporting APKG fails -->
     <string name="apk_share_error">Faddina cumpartzende su documentu apkg</string>
@@ -240,20 +240,20 @@
     <!-- A Menu item to change the Font Size (currently in the Note Editor) -->
     <string name="menu_font_size" maxLength="28">Mannària de su caràtere</string>
     <string name="menu_show_toolbar" comment="Checkable item stating whether the note editor toolbar should be shown" maxLength="28">Ammustra sa barra de sas ainas</string>
-    <string name="format_insert_bold">Formata in grussitu</string>
-    <string name="format_insert_italic">Formata in cursivu</string>
-    <string name="format_insert_underline">Formata in sutaliniadu</string>
-    <string name="insert_horizontal_line">Inserta una lìnia orizontale</string>
-    <string name="insert_heading">Inserta un\'intestatzione</string>
-    <string name="format_font_size">Muda sa mannària de sos caràteres</string>
-    <string name="insert_mathjax">Inserta un\'ecuatzione MathJax</string>
+    <string name="format_insert_bold">Format as bold</string>
+    <string name="format_insert_italic">Format as italic</string>
+    <string name="format_insert_underline">Format as underline</string>
+    <string name="insert_horizontal_line">Insert horizontal line</string>
+    <string name="insert_heading">Insert heading</string>
+    <string name="format_font_size">Change font size</string>
+    <string name="insert_mathjax">Insert MathJax equation</string>
     <string name="note_editor_toolbar_icon">Testu de su hutone</string>
-    <string name="before_text">HTML in antis de s\'ischerta</string>
-    <string name="after_text">HTML a pustis de s\'ischerta</string>
-    <string name="add_toolbar_item">Crea un\'elementu de sa barra de trastes</string>
-    <string name="edit_toolbar_item">Modìfica un\'elementu de sa barra de trastes</string>
+    <string name="before_text">HTML before selection</string>
+    <string name="after_text">HTML after selection</string>
+    <string name="add_toolbar_item">Create toolbar item</string>
+    <string name="edit_toolbar_item">Edit toolbar item</string>
     <string name="toolbar_item_explain_edit_or_remove">Inserta s\'HTML de pònnere in antis e a pustis de su testu seletzionadu\n\nIncarca a longu in un\'elementu de sa barra de sas ainas pro lu modificare o bogare</string>
-    <string name="remove_toolbar_item">Bogare s\'elementu de sa barra de sas ainas?</string>
+    <string name="remove_toolbar_item">Remove toolbar item?</string>
     <string name="note_editor_image_too_large">S\'immàgine est tropu manna, inserta·la in manera manuale</string>
     <string name="note_editor_video_too_large">Custu documentu vìdeu est tropu mannu, inserta·lu in manera manuale</string>
     <string name="note_editor_audio_too_large">Custu documentu àudio est tropu mannu, inserta·lu in manera manuale</string>

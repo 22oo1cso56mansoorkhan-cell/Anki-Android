@@ -120,7 +120,6 @@
     <string name="close">Bağla</string>
     <string name="select">Seç</string>
     <string name="field_remapping">%1$s (from “%2$s”)</string>
-    <string name="confirm_map_cards_to_nothing">Any cards mapped to nothing will be deleted. If a note has no remaining cards, it will be lost. Are you sure you want to continue?</string>
     <string name="missing_note_type">Qeyd növü tapılmadı</string>
     <string name="card_previewer_empty_front_indicator" comment="Extra text appended onto a tab title in the card previewer so that the user can see at a glance whether a card has no front.">%1$s (empty)</string>
     <!-- Image cropper -->
@@ -193,6 +192,7 @@
     <string name="dyn_deck_desc">This is a special deck for studying outside of the normal schedule. Cards will be automatically returned to their original decks after you review them. Deleting this deck from the deck list will return all remaining cards to their original deck.</string>
     <string name="tag_editor_add_feedback">Touch “%2$s” to confirm adding “%1$s”</string>
     <string name="tag_editor_add_feedback_existing">Existing tag “%1$s” selected</string>
+    <string name="tag_already_exists">Tag already exists</string>
     <!-- Time spans -->
     <!-- Currently only used if exporting APKG fails -->
     <string name="apk_share_error">Error sharing apkg file</string>
@@ -238,20 +238,20 @@
     <!-- A Menu item to change the Font Size (currently in the Note Editor) -->
     <string name="menu_font_size" maxLength="28">Font size</string>
     <string name="menu_show_toolbar" comment="Checkable item stating whether the note editor toolbar should be shown" maxLength="28">Show toolbar</string>
-    <string name="format_insert_bold">Format as Bold</string>
-    <string name="format_insert_italic">Format as Italic</string>
-    <string name="format_insert_underline">Format as Underline</string>
-    <string name="insert_horizontal_line">Insert Horizontal Line</string>
-    <string name="insert_heading">Insert Heading</string>
-    <string name="format_font_size">Change Font Size</string>
-    <string name="insert_mathjax">Insert MathJax Equation</string>
+    <string name="format_insert_bold">Format as bold</string>
+    <string name="format_insert_italic">Format as italic</string>
+    <string name="format_insert_underline">Format as underline</string>
+    <string name="insert_horizontal_line">Insert horizontal line</string>
+    <string name="insert_heading">Insert heading</string>
+    <string name="format_font_size">Change font size</string>
+    <string name="insert_mathjax">Insert MathJax equation</string>
     <string name="note_editor_toolbar_icon">Button text</string>
-    <string name="before_text">HTML Before Selection</string>
-    <string name="after_text">HTML After Selection</string>
-    <string name="add_toolbar_item">Create Toolbar Item</string>
-    <string name="edit_toolbar_item">Edit Toolbar Item</string>
+    <string name="before_text">HTML before selection</string>
+    <string name="after_text">HTML after selection</string>
+    <string name="add_toolbar_item">Create toolbar item</string>
+    <string name="edit_toolbar_item">Edit toolbar item</string>
     <string name="toolbar_item_explain_edit_or_remove">Enter HTML to be inserted before and after the selected text\n\nLong press a toolbar item to edit or remove it</string>
-    <string name="remove_toolbar_item">Remove Toolbar Item?</string>
+    <string name="remove_toolbar_item">Remove toolbar item?</string>
     <string name="note_editor_image_too_large">The image is too large, please insert the image manually</string>
     <string name="note_editor_video_too_large">The video file is too large, please insert the video manually</string>
     <string name="note_editor_audio_too_large">The audio file is too large, please insert the audio manually</string>

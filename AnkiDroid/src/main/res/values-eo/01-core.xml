@@ -129,7 +129,7 @@
     <string name="empty_cram_label" maxLength="28">Malplenigi</string>
     <string name="create_subdeck">Krei subkartaron</string>
     <string name="empty_filtered_deck">Malplenigado de filtrita kartaro&#8230;</string>
-    <string name="search_deck" comment="Deck search for selecting it">Serĉi kartaron</string>
+    <string name="search_deck" comment="Deck search for selecting it">Deck search</string>
     <string name="empty_deck">Tiu ĉi kartaro estas malplena</string>
     <string name="invalid_deck_name">Malĝusta nomo por kartaro</string>
     <string name="studyoptions_congrats_finished">Gratulon! Vi finis la hodiaŭan lernadon.</string>
@@ -144,7 +144,6 @@
     <string name="syncing_media">Samhavigado de la vidaŭdaĵoj</string>
     <string name="export_deck" maxLength="28">Elporti kartaron</string>
     <string name="export_collection">Elporti kolekton</string>
-    <string name="nothing">Nenio</string>
     <!-- Card template editor -->
     <string name="title_activity_template_editor">Kartotipoj</string>
     <string name="card_template_editor_front">Ŝablono fronta</string>
@@ -212,6 +211,10 @@
     <string name="remove_account" comment="open a website to start the deletion of an AnkiWeb account">Forigi konton</string>
     <!-- Instant Note Editor -->
     <string name="instant_card" comment="Used in the Android system context menu/share dialog to quickly create a note. This does not need to be translated literally, translate the concept of quickly adding a Cloze note with a popup. ">Tuja karto</string>
+    <!-- Internet Permissions -->
+    <string name="internet_access_title" comment="used for notifying user to unable internet access">Internet</string>
+    <string name="permission_access_summary">Required for the app to work</string>
+    <string name="permission_required_message">Please grant AnkiDroid the ‘%s’ permission to continue</string>
     <!-- Multiple profile -->
     <string name="add_profile">Aldoni profilon</string>
 </resources>

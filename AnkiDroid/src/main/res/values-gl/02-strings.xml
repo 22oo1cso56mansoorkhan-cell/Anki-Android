@@ -120,7 +120,6 @@
     <string name="close">Pechar</string>
     <string name="select">Seleccionar</string>
     <string name="field_remapping">%1$s (de “%2$s”)</string>
-    <string name="confirm_map_cards_to_nothing">Eliminaranse as tarxetas asignadas a ren. Se unha nota non ten tarxetas restantes, perderase. Tes a certeza de querer continuar?</string>
     <string name="missing_note_type">Non se atopou o tipo de nota</string>
     <string name="card_previewer_empty_front_indicator" comment="Extra text appended onto a tab title in the card previewer so that the user can see at a glance whether a card has no front.">%1$s (baleiro)</string>
     <!-- Image cropper -->
@@ -193,6 +192,7 @@
     <string name="dyn_deck_desc">Esta é unha baralla especial para estudar fóra da programación normal. As tarxetas devolveranse ás súas barallas despois de revisalas. Eliminando esta baralla da listaxe devólvense as tarxetas restantes á súa baralla orixinal.</string>
     <string name="tag_editor_add_feedback">Toca sobre \"%2$s\" para confirmar a adición de \"%1$s\"</string>
     <string name="tag_editor_add_feedback_existing">Etiqueta existente \"%1$s\" seleccionada</string>
+    <string name="tag_already_exists">Esta etiqueta xa existe</string>
     <!-- Time spans -->
     <!-- Currently only used if exporting APKG fails -->
     <string name="apk_share_error">Produciuse un erro ao compartir o ficheiro apkg</string>
@@ -244,7 +244,7 @@
     <string name="insert_horizontal_line">Inserir liña horizontal</string>
     <string name="insert_heading">Inserir cabeceira</string>
     <string name="format_font_size">Cambiar tamaño da letra</string>
-    <string name="insert_mathjax">Inserir ecuación MathJax</string>
+    <string name="insert_mathjax">Inserir ecuación en formato MathJax</string>
     <string name="note_editor_toolbar_icon">Texto do botón</string>
     <string name="before_text">HTML antes da selección</string>
     <string name="after_text">HTML despois da selección</string>

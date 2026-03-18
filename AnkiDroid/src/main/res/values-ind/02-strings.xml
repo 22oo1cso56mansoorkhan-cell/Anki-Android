@@ -119,7 +119,6 @@
     <string name="close">Tutup</string>
     <string name="select">Pilih</string>
     <string name="field_remapping">%1$s (dari “%2$s”)</string>
-    <string name="confirm_map_cards_to_nothing">Semua kartu yang yang dibuat kosong akan dihapus. Jika catatan tidak memiliki sisa kartu, kartu tersebut akan hilang. Apa kamu yakin?</string>
     <string name="missing_note_type">Tidak ada jenis catatan yang ditemukan</string>
     <string name="card_previewer_empty_front_indicator" comment="Extra text appended onto a tab title in the card previewer so that the user can see at a glance whether a card has no front.">%1$s (kosong)</string>
     <!-- Image cropper -->
@@ -190,6 +189,7 @@
     <string name="dyn_deck_desc">Ini adalah dek khusus untuk belajar di luar jadwal normal. Kartu akan otomatis dikembalikan ke dek aslinya setelah Anda mengulasnya. Menghapus dek ini dari daftar dek akan mengembalikan semua kartu yang tersisa ke dek aslinya.</string>
     <string name="tag_editor_add_feedback">Sentuh “%2$s” untuk konfirmasi menambah “%1$s”</string>
     <string name="tag_editor_add_feedback_existing">Tag “%1$s” dipilih</string>
+    <string name="tag_already_exists">Tag already exists</string>
     <!-- Time spans -->
     <!-- Currently only used if exporting APKG fails -->
     <string name="apk_share_error">Galat membagikan berkas apkg</string>
@@ -235,20 +235,20 @@
     <!-- A Menu item to change the Font Size (currently in the Note Editor) -->
     <string name="menu_font_size" maxLength="28">Ukuran font</string>
     <string name="menu_show_toolbar" comment="Checkable item stating whether the note editor toolbar should be shown" maxLength="28">Tampilkan toolbar</string>
-    <string name="format_insert_bold">Atur sebagai bold</string>
-    <string name="format_insert_italic">Atur sebagai italic</string>
-    <string name="format_insert_underline">Atur sebagai garis bawah</string>
-    <string name="insert_horizontal_line">Tambahkan garis horizontal</string>
-    <string name="insert_heading">Tambahkan heading</string>
-    <string name="format_font_size">Ubah Ukuran Font</string>
-    <string name="insert_mathjax">Masukkan rumus MathJax</string>
+    <string name="format_insert_bold">Format as bold</string>
+    <string name="format_insert_italic">Format as italic</string>
+    <string name="format_insert_underline">Format as underline</string>
+    <string name="insert_horizontal_line">Insert horizontal line</string>
+    <string name="insert_heading">Insert heading</string>
+    <string name="format_font_size">Change font size</string>
+    <string name="insert_mathjax">Insert MathJax equation</string>
     <string name="note_editor_toolbar_icon">Teks tombol</string>
-    <string name="before_text">HTML Sebelum Pilihan</string>
-    <string name="after_text">HTML Sesudah Pilihan</string>
-    <string name="add_toolbar_item">Buat Item Toolbar</string>
-    <string name="edit_toolbar_item">Ubah Item Toolbar</string>
+    <string name="before_text">HTML before selection</string>
+    <string name="after_text">HTML after selection</string>
+    <string name="add_toolbar_item">Create toolbar item</string>
+    <string name="edit_toolbar_item">Edit toolbar item</string>
     <string name="toolbar_item_explain_edit_or_remove">Masukkan HTML untuk dimasukkan sebelum dan sesudah teks\n\n yang telah dipilih. Tekan toolbar item beberapa saat untuk mencopotnya.</string>
-    <string name="remove_toolbar_item">Copot Item Toolbar?</string>
+    <string name="remove_toolbar_item">Remove toolbar item?</string>
     <string name="note_editor_image_too_large">Gambar ini terlalu besar, mohon masukkan gambar secara manual</string>
     <string name="note_editor_video_too_large">File video terlalu besar, mohon masukkan video secara manual</string>
     <string name="note_editor_audio_too_large">File audio terlalu besar, mohon masukkan audio secara manual</string>

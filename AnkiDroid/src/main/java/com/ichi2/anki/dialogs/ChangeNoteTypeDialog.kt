@@ -68,7 +68,7 @@ import com.ichi2.anki.libanki.NoteTypeId
 import com.ichi2.anki.requireAnkiActivity
 import com.ichi2.anki.showError
 import com.ichi2.anki.snackbar.showSnackbar
-import com.ichi2.anki.sync.launchCatchingRequiringOneWaySyncDiscardUndo
+import com.ichi2.anki.sync.launchCatchingRequiringOneWaySync
 import com.ichi2.anki.ui.BasicItemSelectedListener
 import com.ichi2.anki.ui.internationalization.toSentenceCase
 import com.ichi2.anki.utils.InitStatus
@@ -155,6 +155,7 @@ class ChangeNoteTypeDialog : AnalyticsDialogFragment() {
         launchCatchingTask {
             viewModel.closeDialogFlow.filterNotNull().collect {
                 Timber.i("Dismissing dialog")
+                parentFragmentManager.setFragmentResult(REQUEST_KEY_NOTE_TYPE_CHANGED, bundleOf())
                 dismiss()
             }
         }
@@ -277,6 +278,9 @@ class ChangeNoteTypeDialog : AnalyticsDialogFragment() {
 
     companion object {
         const val ARG_NOTE_IDS = "ARG_NOTE_IDS"
+
+        /** Result key emitted via `setFragmentResult` when note type change completes successfully */
+        const val REQUEST_KEY_NOTE_TYPE_CHANGED = "ChangeNoteTypeDialog::noteTypeChanged"
 
         @CheckResult
         fun newInstance(noteIds: List<NoteId>) =
@@ -637,7 +641,7 @@ class ChangeNoteTypeDialog : AnalyticsDialogFragment() {
  * Changes note type of multiple notes, displaying a message on success
  */
 private fun AnkiActivity.changeNoteType(viewModel: ChangeNoteTypeViewModel) =
-    this.launchCatchingRequiringOneWaySyncDiscardUndo {
+    this.launchCatchingRequiringOneWaySync {
         try {
             val notesUpdated =
                 withProgress {

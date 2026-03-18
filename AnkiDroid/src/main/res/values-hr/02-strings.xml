@@ -121,7 +121,6 @@
     <string name="close">Zatvori</string>
     <string name="select">Odaberi</string>
     <string name="field_remapping">%1$s (od“%2$s”)</string>
-    <string name="confirm_map_cards_to_nothing">Sve kartice koje nisu ni sa čim povezani bit će izbrisane. Ako bilješka nema nijednu preostalu karticu, bit će izgubljena. Jeste li sigurno da želite nastaviti?</string>
     <string name="missing_note_type">Nije pronađen nijedan tip bilješke</string>
     <string name="card_previewer_empty_front_indicator" comment="Extra text appended onto a tab title in the card previewer so that the user can see at a glance whether a card has no front.">%1$s (prazno)</string>
     <!-- Image cropper -->
@@ -196,6 +195,7 @@
     <string name="dyn_deck_desc">Ovo je poseban špil za učenje izvan uobičajenog rasporeda. Kartice će automatski biti vraćene u njihov originalni špil nakon što ih ponovite. Brisanjem ovog špila iz popisa špilova će se sve preostale kartice vratiti u njihov originalni špil.</string>
     <string name="tag_editor_add_feedback">Pritisnite “%2$s” da potvrdite dodavanje “%1$s</string>
     <string name="tag_editor_add_feedback_existing">Odabrana postojeća oznaka “%1$s”</string>
+    <string name="tag_already_exists">Tag already exists</string>
     <!-- Time spans -->
     <!-- Currently only used if exporting APKG fails -->
     <string name="apk_share_error">Greška pri dijeljenju apkg datoteke</string>
@@ -241,20 +241,20 @@
     <!-- A Menu item to change the Font Size (currently in the Note Editor) -->
     <string name="menu_font_size" maxLength="28">Veličina fonta</string>
     <string name="menu_show_toolbar" comment="Checkable item stating whether the note editor toolbar should be shown" maxLength="28">Pokaži alatnu traku</string>
-    <string name="format_insert_bold">Formatiraj podebljano</string>
-    <string name="format_insert_italic">Formatiraj kao kurziv</string>
-    <string name="format_insert_underline">Formatiraj podcrtano</string>
-    <string name="insert_horizontal_line">Umetni vodoravnu liniju</string>
-    <string name="insert_heading">Umetni zaglavlje</string>
-    <string name="format_font_size">Promijeni veličinu slova</string>
-    <string name="insert_mathjax">Umetni MathJax jednadžbu</string>
+    <string name="format_insert_bold">Format as bold</string>
+    <string name="format_insert_italic">Format as italic</string>
+    <string name="format_insert_underline">Format as underline</string>
+    <string name="insert_horizontal_line">Insert horizontal line</string>
+    <string name="insert_heading">Insert heading</string>
+    <string name="format_font_size">Change font size</string>
+    <string name="insert_mathjax">Insert MathJax equation</string>
     <string name="note_editor_toolbar_icon">Tekst gumba</string>
-    <string name="before_text">HTML prije odabranog teksta</string>
-    <string name="after_text">HTML poslije odabranog teksta</string>
-    <string name="add_toolbar_item">Stvori stavku alatne trake</string>
-    <string name="edit_toolbar_item">Uredi stavku alatne trake</string>
+    <string name="before_text">HTML before selection</string>
+    <string name="after_text">HTML after selection</string>
+    <string name="add_toolbar_item">Create toolbar item</string>
+    <string name="edit_toolbar_item">Edit toolbar item</string>
     <string name="toolbar_item_explain_edit_or_remove">Unesi HTML koji će biti umetnut ispred i iza odabranog teksta\n\nPritisnute dugo na stavku alatne trake kako biste je uredili ili uklonili</string>
-    <string name="remove_toolbar_item">Ukloni stavku alatne trake?</string>
+    <string name="remove_toolbar_item">Remove toolbar item?</string>
     <string name="note_editor_image_too_large">Slika je prevelika, umetnite sliku ručno</string>
     <string name="note_editor_video_too_large">Video datoteka je prevelika, umetnite video ručno</string>
     <string name="note_editor_audio_too_large">Zvučna datoteka je prevelika, umetnite zvuk ručno</string>

@@ -129,7 +129,7 @@
     <string name="empty_cram_label" maxLength="28">Boşalt</string>
     <string name="create_subdeck">Altdeste oluştur</string>
     <string name="empty_filtered_deck">Filtreli deste boşaltılıyor&#8230;</string>
-    <string name="search_deck" comment="Deck search for selecting it">Deste Ara</string>
+    <string name="search_deck" comment="Deck search for selecting it">Deck search</string>
     <string name="empty_deck">Bu deste boş</string>
     <string name="invalid_deck_name">Geçersiz deste adı</string>
     <string name="studyoptions_congrats_finished">Tebrikler! Bugünlük bitirdiniz.</string>
@@ -144,7 +144,6 @@
     <string name="syncing_media">Medya senkronize ediliyor</string>
     <string name="export_deck" maxLength="28">Desteyi dışarı aktar</string>
     <string name="export_collection">Koleksiyonu dışarı aktar</string>
-    <string name="nothing">Hiçbir şey</string>
     <!-- Card template editor -->
     <string name="title_activity_template_editor">Kart türleri</string>
     <string name="card_template_editor_front">Ön şablon</string>
@@ -212,6 +211,10 @@
     <string name="remove_account" comment="open a website to start the deletion of an AnkiWeb account">Hesabı sil</string>
     <!-- Instant Note Editor -->
     <string name="instant_card" comment="Used in the Android system context menu/share dialog to quickly create a note. This does not need to be translated literally, translate the concept of quickly adding a Cloze note with a popup. ">Anında kart</string>
+    <!-- Internet Permissions -->
+    <string name="internet_access_title" comment="used for notifying user to unable internet access">Internet</string>
+    <string name="permission_access_summary">Required for the app to work</string>
+    <string name="permission_required_message">Please grant AnkiDroid the ‘%s’ permission to continue</string>
     <!-- Multiple profile -->
     <string name="add_profile">Profil Ekle</string>
 </resources>

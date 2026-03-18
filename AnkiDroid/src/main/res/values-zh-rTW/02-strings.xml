@@ -119,7 +119,6 @@
     <string name="close">關閉</string>
     <string name="select">選擇</string>
     <string name="field_remapping">%1$s (來自「%2$s」)</string>
-    <string name="confirm_map_cards_to_nothing">空白卡片會被刪除，而筆記如果沒有在卡片上也會遺失。你確定要繼續嗎？</string>
     <string name="missing_note_type">未找到筆記類型</string>
     <string name="card_previewer_empty_front_indicator" comment="Extra text appended onto a tab title in the card previewer so that the user can see at a glance whether a card has no front.">%1$s（空白）</string>
     <!-- Image cropper -->
@@ -190,6 +189,7 @@
     <string name="dyn_deck_desc">這是專門用來進行額外學習進度的牌組。卡片在你複習完以後會自動回歸原本的牌組。如果在牌組列表中刪除這個牌組，其他剩下的卡片也會回歸它們原本的牌組。</string>
     <string name="tag_editor_add_feedback">輕觸 \"%2$s\" 確認新增 \"%1$s\"</string>
     <string name="tag_editor_add_feedback_existing">現有標籤 \"%1$s\" 已選擇</string>
+    <string name="tag_already_exists">Tag already exists</string>
     <!-- Time spans -->
     <!-- Currently only used if exporting APKG fails -->
     <string name="apk_share_error">分享 Apkg 檔案時出錯</string>
@@ -235,20 +235,20 @@
     <!-- A Menu item to change the Font Size (currently in the Note Editor) -->
     <string name="menu_font_size" maxLength="28">字型大小</string>
     <string name="menu_show_toolbar" comment="Checkable item stating whether the note editor toolbar should be shown" maxLength="28">顯示工具列</string>
-    <string name="format_insert_bold">格式化為粗體</string>
-    <string name="format_insert_italic">格式化為斜體</string>
-    <string name="format_insert_underline">格式化為底線</string>
-    <string name="insert_horizontal_line">插入水平線</string>
-    <string name="insert_heading">插入標題</string>
-    <string name="format_font_size">變更字型大小</string>
-    <string name="insert_mathjax">插入 MathJax 方程式</string>
+    <string name="format_insert_bold">Format as bold</string>
+    <string name="format_insert_italic">Format as italic</string>
+    <string name="format_insert_underline">Format as underline</string>
+    <string name="insert_horizontal_line">Insert horizontal line</string>
+    <string name="insert_heading">Insert heading</string>
+    <string name="format_font_size">Change font size</string>
+    <string name="insert_mathjax">Insert MathJax equation</string>
     <string name="note_editor_toolbar_icon">按鈕文字</string>
-    <string name="before_text">選取內容前的 HTML</string>
-    <string name="after_text">選取內容後的 HTML</string>
-    <string name="add_toolbar_item">建立工具列項目</string>
-    <string name="edit_toolbar_item">編輯工具列項目</string>
+    <string name="before_text">HTML before selection</string>
+    <string name="after_text">HTML after selection</string>
+    <string name="add_toolbar_item">Create toolbar item</string>
+    <string name="edit_toolbar_item">Edit toolbar item</string>
     <string name="toolbar_item_explain_edit_or_remove">請在選取文字的前後出入要添加的HTML碼\n\n長按工具列項目以編輯或移除</string>
-    <string name="remove_toolbar_item">是否移除工具列項目？</string>
+    <string name="remove_toolbar_item">Remove toolbar item?</string>
     <string name="note_editor_image_too_large">此圖像太大，無法貼上，請手動插入</string>
     <string name="note_editor_video_too_large">影片太大，無法貼上，請手動插入</string>
     <string name="note_editor_audio_too_large">此音訊檔太大，無法貼上，請手動插入</string>

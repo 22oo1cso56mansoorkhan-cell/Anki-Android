@@ -120,7 +120,6 @@
     <string name="close">Isara</string>
     <string name="select">Piliin</string>
     <string name="field_remapping">%1$s (mula sa \"%2$s\")</string>
-    <string name="confirm_map_cards_to_nothing">Ang anumang mga kard na nakabalangkas sa wala ay matatanggal. Kung ang isang tala ay walang natitirang mga kard, ito ay mawawala. Sigurado ka bang gusto mong magpatuloy?</string>
     <string name="missing_note_type">Walang mahanap na uri ng tala</string>
     <string name="card_previewer_empty_front_indicator" comment="Extra text appended onto a tab title in the card previewer so that the user can see at a glance whether a card has no front.">%1$s (empty)</string>
     <!-- Image cropper -->
@@ -193,6 +192,7 @@
     <string name="dyn_deck_desc">Ito ay isang espesyal na deck para sa pag-aaral sa labas ng normal na iskedyul. Ang mga kard ay awtomatikong ibabalik sa kanilang orihinal na mga deck matapos mong suriin ang mga ito. Ang pagtanggal sa kubyerta mula sa listahan ng deck ay babalik ang lahat ng natitirang mga card sa kanilang orihinal na deck.</string>
     <string name="tag_editor_add_feedback">Pindutin ang \"%2$s\" para kumpirmahin ang pagdaragdag ng \"%1$s\"</string>
     <string name="tag_editor_add_feedback_existing">Napili ang umiiral na tag na \"%1$s\"</string>
+    <string name="tag_already_exists">Tag already exists</string>
     <!-- Time spans -->
     <!-- Currently only used if exporting APKG fails -->
     <string name="apk_share_error">Mali sa pagbabahagi ng apkg file</string>
@@ -238,20 +238,20 @@
     <!-- A Menu item to change the Font Size (currently in the Note Editor) -->
     <string name="menu_font_size" maxLength="28">Laki ng font</string>
     <string name="menu_show_toolbar" comment="Checkable item stating whether the note editor toolbar should be shown" maxLength="28">Ipakita ang toolbar</string>
-    <string name="format_insert_bold">I-bold</string>
-    <string name="format_insert_italic">I-italic</string>
-    <string name="format_insert_underline">Salungguhitan</string>
-    <string name="insert_horizontal_line">Lagyan ng Pahalang na Linya</string>
-    <string name="insert_heading">Lagyan ng Pamuhatan</string>
-    <string name="format_font_size">Palitan ang Laki ng Font</string>
-    <string name="insert_mathjax">Lagyan ng MathJax na Ekwasyon</string>
+    <string name="format_insert_bold">Format as bold</string>
+    <string name="format_insert_italic">Format as italic</string>
+    <string name="format_insert_underline">Format as underline</string>
+    <string name="insert_horizontal_line">Insert horizontal line</string>
+    <string name="insert_heading">Insert heading</string>
+    <string name="format_font_size">Change font size</string>
+    <string name="insert_mathjax">Insert MathJax equation</string>
     <string name="note_editor_toolbar_icon">Teksto ng Pindutan</string>
-    <string name="before_text">HTML Bago ang Pinili</string>
-    <string name="after_text">HTML Pagkatapos ang Pinili</string>
-    <string name="add_toolbar_item">Gumawa ng Toolbar Item</string>
-    <string name="edit_toolbar_item">Baguhin ang Toolbar Item</string>
+    <string name="before_text">HTML before selection</string>
+    <string name="after_text">HTML after selection</string>
+    <string name="add_toolbar_item">Create toolbar item</string>
+    <string name="edit_toolbar_item">Edit toolbar item</string>
     <string name="toolbar_item_explain_edit_or_remove">Magtala ng HTML na ilalagay bago at pagkatapos ng piniling teksto\n\nIdiin ang toolbar item upang baguhin o tanggalin ito</string>
-    <string name="remove_toolbar_item">Tanggalin ang Toolbar Item?</string>
+    <string name="remove_toolbar_item">Remove toolbar item?</string>
     <string name="note_editor_image_too_large">Ang larawan ay masyadong malaki, pakilagay ang larawan nang mano-mano</string>
     <string name="note_editor_video_too_large">Ang video file ay masyadong malaki, pakilagay ang video nang mano-mano</string>
     <string name="note_editor_audio_too_large">Ang audio file ay masyadong malaki, pakilagay ang audio nang mano-mano</string>

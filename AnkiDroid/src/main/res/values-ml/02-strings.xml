@@ -120,7 +120,6 @@
     <string name="close">അടയ്‌ക്കുക</string>
     <string name="select">തിരഞ്ഞെടുക്കുക</string>
     <string name="field_remapping">%1$s (“%2$s” ൽ നിന്ന്)</string>
-    <string name="confirm_map_cards_to_nothing">ഒന്നുമില്ലാതെ മാപ്പുചെയ്ത ഏത് കാർഡുകളും ഇല്ലാതാക്കപ്പെടും. ഒരു കുറിപ്പിന് ശേഷിക്കുന്ന കാർഡുകളില്ലെങ്കിൽ, അത് നഷ്‌ടപ്പെടും. തുടരണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ?</string>
     <string name="missing_note_type">നോട്ട് തരങ്ങളൊന്നും കണ്ടെത്തിയില്ല</string>
     <string name="card_previewer_empty_front_indicator" comment="Extra text appended onto a tab title in the card previewer so that the user can see at a glance whether a card has no front.">%1$s (empty)</string>
     <!-- Image cropper -->
@@ -193,6 +192,7 @@
     <string name="dyn_deck_desc">സാധാരണ ഷെഡ്യൂളിന് പുറത്ത് പഠിക്കുന്നതിനുള്ള ഒരു പ്രത്യേക ഡെക്കാണിത്. കാർഡുകൾ നിങ്ങൾ അവലോകനം ചെയ്ത ശേഷം അവയുടെ യഥാർത്ഥ ഡെക്കുകളിലേക്ക് സ്വപ്രേരിതമായി മടങ്ങും. ഡെക്ക് ലിസ്റ്റിൽ നിന്ന് ഈ ഡെക്ക് ഇല്ലാതാക്കുന്നത് ശേഷിക്കുന്ന എല്ലാ കാർഡുകളും അവയുടെ യഥാർത്ഥ ഡെക്കിലേക്ക് തിരികെ നൽകും.</string>
     <string name="tag_editor_add_feedback">“%1$s” ചേർക്കുന്നത് സ്ഥിരീകരിക്കുന്നതിന് “%2$s” സ്‌പർശിക്കുക.</string>
     <string name="tag_editor_add_feedback_existing">നിലവിലുള്ള ടാഗ് “%1$s” തിരഞ്ഞെടുത്തു</string>
+    <string name="tag_already_exists">Tag already exists</string>
     <!-- Time spans -->
     <!-- Currently only used if exporting APKG fails -->
     <string name="apk_share_error">apkg ഫയൽ പങ്കിടുന്നതിൽ പിശക്</string>
@@ -238,20 +238,20 @@
     <!-- A Menu item to change the Font Size (currently in the Note Editor) -->
     <string name="menu_font_size" maxLength="28">അക്ഷര വലിപ്പം</string>
     <string name="menu_show_toolbar" comment="Checkable item stating whether the note editor toolbar should be shown" maxLength="28">ടൂൾബാർ കാണിക്കുക</string>
-    <string name="format_insert_bold">Format as Bold</string>
-    <string name="format_insert_italic">Format as Italic</string>
-    <string name="format_insert_underline">Format as Underline</string>
-    <string name="insert_horizontal_line">Insert Horizontal Line</string>
-    <string name="insert_heading">Insert Heading</string>
-    <string name="format_font_size">Change Font Size</string>
-    <string name="insert_mathjax">Insert MathJax Equation</string>
+    <string name="format_insert_bold">Format as bold</string>
+    <string name="format_insert_italic">Format as italic</string>
+    <string name="format_insert_underline">Format as underline</string>
+    <string name="insert_horizontal_line">Insert horizontal line</string>
+    <string name="insert_heading">Insert heading</string>
+    <string name="format_font_size">Change font size</string>
+    <string name="insert_mathjax">Insert MathJax equation</string>
     <string name="note_editor_toolbar_icon">ബട്ടൺ ടെക്സ്റ്റ്</string>
-    <string name="before_text">തിരഞ്ഞെടുക്കുന്നതിന് മുമ്പുള്ള HTML</string>
-    <string name="after_text">തിരഞ്ഞെടുത്തതിന് ശേഷം HTML</string>
-    <string name="add_toolbar_item">ടൂൾബാർ ഇനം സൃഷ്ടിക്കുക</string>
-    <string name="edit_toolbar_item">ടൂൾബാർ ഇനം എഡിറ്റ് ചെയ്യുക</string>
+    <string name="before_text">HTML before selection</string>
+    <string name="after_text">HTML after selection</string>
+    <string name="add_toolbar_item">Create toolbar item</string>
+    <string name="edit_toolbar_item">Edit toolbar item</string>
     <string name="toolbar_item_explain_edit_or_remove">തിരഞ്ഞെടുത്ത വാചകത്തിന് മുമ്പും ശേഷവും ചേർക്കുന്നതിന് HTML നൽകുക\n\nഒരു ടൂൾബാർ ഇനം എഡിറ്റ് ചെയ്യാനോ നീക്കം ചെയ്യാനോ ദീർഘനേരം അമർത്തുക</string>
-    <string name="remove_toolbar_item">ടൂൾബാർ ഇനം നീക്കം ചെയ്യണോ?</string>
+    <string name="remove_toolbar_item">Remove toolbar item?</string>
     <string name="note_editor_image_too_large">ചിത്രം വളരെ വലുതാണ്, ചിത്രം നേരിട്ട് ചേർക്കുക</string>
     <string name="note_editor_video_too_large">വീഡിയോ ഫയൽ വളരെ വലുതാണ്, വീഡിയോ നേരിട്ട് ചേർക്കുക</string>
     <string name="note_editor_audio_too_large">ഓഡിയോ ഫയൽ വളരെ വലുതാണ്, ഓഡിയോ നേരിട്ട് ചേർക്കുക</string>

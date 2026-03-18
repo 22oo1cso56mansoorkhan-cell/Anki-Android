@@ -135,7 +135,7 @@
     <string name="empty_cram_label" maxLength="28">Очистить</string>
     <string name="create_subdeck">Создать подколоду</string>
     <string name="empty_filtered_deck">Фильтрованная колода очищается&#8230;</string>
-    <string name="search_deck" comment="Deck search for selecting it">Поиск колод</string>
+    <string name="search_deck" comment="Deck search for selecting it">Deck search</string>
     <string name="empty_deck">Эта колода пуста</string>
     <string name="invalid_deck_name">Недопустимое название колоды</string>
     <string name="studyoptions_congrats_finished">Ура! На сегодня всё.</string>
@@ -150,7 +150,6 @@
     <string name="syncing_media">Синхронизация медиафайлов</string>
     <string name="export_deck" maxLength="28">Экспортировать колоду</string>
     <string name="export_collection">Экспортировать коллекцию</string>
-    <string name="nothing">Ничего</string>
     <!-- Card template editor -->
     <string name="title_activity_template_editor">Типы карточек</string>
     <string name="card_template_editor_front">Шаблон лица</string>
@@ -222,6 +221,10 @@
     <string name="remove_account" comment="open a website to start the deletion of an AnkiWeb account">Удалить аккаунт</string>
     <!-- Instant Note Editor -->
     <string name="instant_card" comment="Used in the Android system context menu/share dialog to quickly create a note. This does not need to be translated literally, translate the concept of quickly adding a Cloze note with a popup. ">Тест с пропусками</string>
+    <!-- Internet Permissions -->
+    <string name="internet_access_title" comment="used for notifying user to unable internet access">Internet</string>
+    <string name="permission_access_summary">Required for the app to work</string>
+    <string name="permission_required_message">Please grant AnkiDroid the ‘%s’ permission to continue</string>
     <!-- Multiple profile -->
     <string name="add_profile">Добавить профиль</string>
 </resources>

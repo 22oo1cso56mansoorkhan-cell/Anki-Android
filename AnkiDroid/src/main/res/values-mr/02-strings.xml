@@ -120,7 +120,6 @@
     <string name="close">Banda</string>
     <string name="select">Nivaḍā</string>
     <string name="field_remapping">%1$s(Pāsūna \"%2$s\")</string>
-    <string name="confirm_map_cards_to_nothing">Kāhīhī na kēlēlyā kōṇatyāhī kārḍānnā haṭavilē jā\'īla. Ṭīpakaḍē urvarita kārḍa nasalyāsa tō gamāvalā jā\'īla. Āpalyālā khātrī āhē kī āpaṇa surū ṭhēvū icchitā?</string>
     <string name="missing_note_type">नोट प्रकार आढळला नाही</string>
     <string name="card_previewer_empty_front_indicator" comment="Extra text appended onto a tab title in the card previewer so that the user can see at a glance whether a card has no front.">%1$s (empty)</string>
     <!-- Image cropper -->
@@ -193,6 +192,7 @@
     <string name="dyn_deck_desc">सामान्य शेड्यूलच्या बाहेर अभ्यास करण्यासाठी हा एक विशेष डेक आहे. तुम्ही त्यांचे पुनरावलोकन केल्यानंतर कार्डे आपोआप त्यांच्या मूळ डेकवर परत येतील. डेक सूचीमधून हा डेक हटवल्याने उर्वरित सर्व कार्ड त्यांच्या मूळ डेकवर परत येतील.</string>
     <string name="tag_editor_add_feedback">\"%1$s\" जोडण्याची पुष्टी करण्यासाठी \"%2$s\" ला स्पर्श करा</string>
     <string name="tag_editor_add_feedback_existing">\"%1$s\" विद्यमान टॅग निवडला.</string>
+    <string name="tag_already_exists">Tag already exists</string>
     <!-- Time spans -->
     <!-- Currently only used if exporting APKG fails -->
     <string name="apk_share_error">apkg फाइल शेअर करताना त्रुटी</string>
@@ -238,20 +238,20 @@
     <!-- A Menu item to change the Font Size (currently in the Note Editor) -->
     <string name="menu_font_size" maxLength="28">अक्षराचा आकार</string>
     <string name="menu_show_toolbar" comment="Checkable item stating whether the note editor toolbar should be shown" maxLength="28">टूलबार दर्शवा</string>
-    <string name="format_insert_bold">ठळक म्हणून स्वरूपित करा</string>
-    <string name="format_insert_italic">इटालिक म्हणून स्वरूपित करा</string>
-    <string name="format_insert_underline">अधोरेखित म्हणून स्वरूपित करा</string>
-    <string name="insert_horizontal_line">क्षैतिज रेखा घाला</string>
-    <string name="insert_heading">मथळा घाला</string>
-    <string name="format_font_size">फॉन्ट आकार बदला</string>
-    <string name="insert_mathjax">मॅथजॅक्स समीकरण घाला</string>
+    <string name="format_insert_bold">Format as bold</string>
+    <string name="format_insert_italic">Format as italic</string>
+    <string name="format_insert_underline">Format as underline</string>
+    <string name="insert_horizontal_line">Insert horizontal line</string>
+    <string name="insert_heading">Insert heading</string>
+    <string name="format_font_size">Change font size</string>
+    <string name="insert_mathjax">Insert MathJax equation</string>
     <string name="note_editor_toolbar_icon">बटण मजकूर</string>
-    <string name="before_text">निवड करण्यापूर्वी एचटीएमएल</string>
-    <string name="after_text">निवडानंतर एचटीएमएल</string>
-    <string name="add_toolbar_item">टूलबार आयटम तयार करा</string>
-    <string name="edit_toolbar_item">टूलबार आयटम संपादित करा</string>
+    <string name="before_text">HTML before selection</string>
+    <string name="after_text">HTML after selection</string>
+    <string name="add_toolbar_item">Create toolbar item</string>
+    <string name="edit_toolbar_item">Edit toolbar item</string>
     <string name="toolbar_item_explain_edit_or_remove">निवडलेल्या मजकुराच्या आधी आणि नंतर घालण्यासाठी HTML प्रविष्ट करा\n\nटूलबार आयटम संपादित करण्यासाठी किंवा काढण्यासाठी बराच वेळ दाबा</string>
-    <string name="remove_toolbar_item">टूलबार आयटम काढायचा?</string>
+    <string name="remove_toolbar_item">Remove toolbar item?</string>
     <string name="note_editor_image_too_large">The image is too large, please insert the image manually</string>
     <string name="note_editor_video_too_large">The video file is too large, please insert the video manually</string>
     <string name="note_editor_audio_too_large">The audio file is too large, please insert the audio manually</string>

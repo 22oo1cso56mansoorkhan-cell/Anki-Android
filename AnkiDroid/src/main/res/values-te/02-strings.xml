@@ -120,7 +120,6 @@
     <string name="close">మూయుట</string>
     <string name="select">ఎంచుకోండి</string>
     <string name="field_remapping">%1$s (from “%2$s”)</string>
-    <string name="confirm_map_cards_to_nothing">ఏదైనా మ్యాప్ చేసిన కార్డ్లు తొలగించబడతాయి. గమనికకు మిగిలిన కార్డులు లేకుంటే, అది కోల్పోతుంది. మీరు ఖచ్చితంగా కొనసాగించాలనుకుంటున్నారా?</string>
     <string name="missing_note_type">గమనిక రకం కనుగొనబడలేదు</string>
     <string name="card_previewer_empty_front_indicator" comment="Extra text appended onto a tab title in the card previewer so that the user can see at a glance whether a card has no front.">%1$s (empty)</string>
     <!-- Image cropper -->
@@ -193,6 +192,7 @@
     <string name="dyn_deck_desc">సాధారణ షెడ్యూల్ అధ్యయనం కోసం ఇది ప్రత్యేక డెక్. స్వయంచాలకంగా కార్డ్లను వాటిని సమీక్షించి, దాని అసలు డెక్స్కు వాటిని స్వయంచాలకంగా పునరుద్ధరించండి. డెక్ జాబితా నుండి ఈ డెక్ను తొలగిస్తే మిగిలిన అన్ని కార్డులను వారి అసలు డెక్కు తిరిగి పంపుతుంది.</string>
     <string name="tag_editor_add_feedback">\"%1$s\" ని జోడించడాన్ని నిర్ధారించడానికి \"%2$s\" తాకండి</string>
     <string name="tag_editor_add_feedback_existing">ఇప్పటికే ఉన్న ట్యాగ్ \"%1$s\" ఎంచుకోబడింది</string>
+    <string name="tag_already_exists">Tag already exists</string>
     <!-- Time spans -->
     <!-- Currently only used if exporting APKG fails -->
     <string name="apk_share_error">Apkg ఫైల్ను భాగస్వామ్యం చేయడంలో లోపం</string>
@@ -238,20 +238,20 @@
     <!-- A Menu item to change the Font Size (currently in the Note Editor) -->
     <string name="menu_font_size" maxLength="28">ఫాంట్ పరిమాణం</string>
     <string name="menu_show_toolbar" comment="Checkable item stating whether the note editor toolbar should be shown" maxLength="28">టూల్ బార్ చూపించు</string>
-    <string name="format_insert_bold">బోల్డ్‌గా ఫార్మాట్ చేయండి</string>
-    <string name="format_insert_italic">ఇటాలిక్‌గా ఫార్మాట్ చేయండి</string>
-    <string name="format_insert_underline">అండర్‌లైన్‌గా ఫార్మాట్ చేయండి</string>
-    <string name="insert_horizontal_line">క్షితిజ సమాంతర రేఖను చొప్పించండి</string>
-    <string name="insert_heading">శీర్షికను చొప్పించండి</string>
-    <string name="format_font_size">ఫాంట్ పరిమాణాన్ని మార్చండి</string>
-    <string name="insert_mathjax">MathJax సమీకరణాన్ని చొప్పించండి</string>
+    <string name="format_insert_bold">Format as bold</string>
+    <string name="format_insert_italic">Format as italic</string>
+    <string name="format_insert_underline">Format as underline</string>
+    <string name="insert_horizontal_line">Insert horizontal line</string>
+    <string name="insert_heading">Insert heading</string>
+    <string name="format_font_size">Change font size</string>
+    <string name="insert_mathjax">Insert MathJax equation</string>
     <string name="note_editor_toolbar_icon">బటన్ టెక్స్ట్</string>
-    <string name="before_text">ఎంపికకు ముందు HTML</string>
-    <string name="after_text">ఎంపిక తర్వాత HTML</string>
-    <string name="add_toolbar_item">టూల్‌బార్ అంశాన్ని సృష్టించండి</string>
-    <string name="edit_toolbar_item">టూల్‌బార్ అంశాన్ని సవరించండి</string>
+    <string name="before_text">HTML before selection</string>
+    <string name="after_text">HTML after selection</string>
+    <string name="add_toolbar_item">Create toolbar item</string>
+    <string name="edit_toolbar_item">Edit toolbar item</string>
     <string name="toolbar_item_explain_edit_or_remove">ఎంచుకున్న వచనానికి ముందు మరియు తర్వాత ఇన్సర్ట్ చేయడానికి HTMLని నమోదు చేయండి\n\nటూల్‌బార్ అంశాన్ని సవరించడానికి లేదా తీసివేయడానికి ఎక్కువసేపు నొక్కండి</string>
-    <string name="remove_toolbar_item">టూల్‌బార్ అంశాన్ని తీసివేయాలా?</string>
+    <string name="remove_toolbar_item">Remove toolbar item?</string>
     <string name="note_editor_image_too_large">చిత్రం చాలా పెద్దది, దయచేసి చిత్రాన్ని మాన్యువల్‌గా చొప్పించండి</string>
     <string name="note_editor_video_too_large">వీడియో ఫైల్ చాలా పెద్దది, దయచేసి వీడియోని మాన్యువల్‌గా చొప్పించండి</string>
     <string name="note_editor_audio_too_large">ఆడియో ఫైల్ చాలా పెద్దది, దయచేసి ఆడియోను మాన్యువల్‌గా చొప్పించండి</string>

@@ -20,6 +20,7 @@ import android.util.AttributeSet
 import com.ichi2.anki.R
 import com.ichi2.anki.cardviewer.GestureProcessor
 import com.ichi2.anki.dialogs.CardSideSelectionDialog
+import com.ichi2.anki.dialogs.WarningDisplay
 import com.ichi2.anki.preferences.allPreferences
 import com.ichi2.anki.reviewer.Binding
 import com.ichi2.anki.reviewer.CardSide
@@ -58,7 +59,6 @@ open class ReviewerControlPreference : ControlPreference {
     }
 
     override fun getSummary(): CharSequence =
-        // Don't show the `Q:` and `A:` prefixes if the side is set
         if (side != null) {
             getMappableBindings().joinToString(", ") { it.binding.toDisplayString(context) }
         } else {
@@ -71,12 +71,67 @@ open class ReviewerControlPreference : ControlPreference {
     override fun getMappableBindings(): List<ReviewerBinding> = ReviewerBinding.fromPreferenceString(value).toList()
 
     @Suppress("UNCHECKED_CAST")
-    override fun getRelatedPreferences(): List<ReviewerControlPreference> =
-        preferenceManager.preferenceScreen
-            .allPreferences()
-            .filter {
-                it::class == ReviewerControlPreference::class
-            } as List<ReviewerControlPreference>
+    override fun getRelatedPreferences(): List<ReviewerControlPreference> {
+        val allPrefs =
+            preferenceManager.preferenceScreen
+                .allPreferences()
+                .filter { it::class == ReviewerControlPreference::class } as List<ReviewerControlPreference>
+
+        val answerActionKeys =
+            setOf(
+                context.getString(R.string.answer_again_command_key),
+                context.getString(R.string.answer_hard_command_key),
+                context.getString(R.string.answer_good_command_key),
+                context.getString(R.string.answer_easy_command_key),
+            )
+
+        // For answer actions: check against all other answer actions (excluding itself)
+        if (key in answerActionKeys) {
+            return allPrefs.filter { it.key in answerActionKeys && it.key != key }
+        }
+
+        // For all other preferences (including show answer): return all preferences
+        return allPrefs
+    }
+
+    override fun warnIfUsed(
+        binding: Binding,
+        warningDisplay: WarningDisplay,
+    ): Boolean {
+        val bindingPreference = getPreferenceAssignedTo(binding) ?: return false
+        if (bindingPreference == this) return false
+
+        val answerActionKeys =
+            setOf(
+                context.getString(R.string.answer_again_command_key),
+                context.getString(R.string.answer_hard_command_key),
+                context.getString(R.string.answer_good_command_key),
+                context.getString(R.string.answer_easy_command_key),
+            )
+
+        val showAnswerKey = context.getString(R.string.show_answer_command_key)
+
+        val isCurrentAnswer = key in answerActionKeys
+        val isCurrentShowAnswer = key == showAnswerKey
+        val isOtherAnswer = bindingPreference.key in answerActionKeys
+        val isOtherShowAnswer = bindingPreference.key == showAnswerKey
+
+        // Allow sharing if either preference is Show answer
+        if (isCurrentShowAnswer || isOtherShowAnswer) {
+            return false
+        }
+
+        // Only show warning when answer action conflicts with another answer action
+        if (isCurrentAnswer && isOtherAnswer) {
+            val actionTitle = bindingPreference.title ?: ""
+            val warning = context.getString(R.string.bindings_already_bound, actionTitle)
+            warningDisplay.setWarning(warning)
+            return true
+        }
+
+        // No warning for all other cases
+        return false
+    }
 
     fun interface OnBindingSelectedListener {
         /**

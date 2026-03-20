@@ -67,7 +67,11 @@ class ControlsSettingsFragment :
         setControlPreferencesDefaultValues(initialScreen)
         setDynamicTitle()
         setupNewStudyScreenSettings()
-        setupAnswerCommands()
+
+        // Setup answer commands for initial screen if it's REVIEWER
+        if (initialScreen == ControlPreferenceScreen.REVIEWER) {
+            setupAnswerCommands()
+        }
     }
 
     /**
@@ -124,6 +128,11 @@ class ControlsSettingsFragment :
         setControlPreferencesDefaultValues(screen)
         setDynamicTitle()
         setupNewStudyScreenSettings()
+
+        // Re-setup answer commands for REVIEWER tab
+        if (screen == ControlPreferenceScreen.REVIEWER) {
+            setupAnswerCommands()
+        }
     }
 
     @NeedsTest("Only the tab elements are removed")
@@ -203,31 +212,51 @@ class ControlsSettingsFragment :
     }
 
     private fun setupAnswerCommands() {
-        val showAnswerPref = (findPreference<ControlPreference>(R.string.show_answer_command_key) as? ReviewerControlPreference)
+        Timber.d("Setting up answer commands")
 
+        // Get the show answer preference
+        val showAnswerPref = findPreference<ReviewerControlPreference>(R.string.show_answer_command_key)
+
+        // List of answer command keys using resource IDs
         val answerCommandKeys =
             listOf(
-                ViewerAction.ANSWER_AGAIN.preferenceKey,
-                ViewerAction.ANSWER_HARD.preferenceKey,
-                ViewerAction.ANSWER_GOOD.preferenceKey,
-                ViewerAction.ANSWER_EASY.preferenceKey,
+                R.string.answer_again_command_key,
+                R.string.answer_hard_command_key,
+                R.string.answer_good_command_key,
+                R.string.answer_easy_command_key,
             )
-        for (key in answerCommandKeys) {
-            (findPreference<Preference>(key) as? ReviewerControlPreference)?.let { answerPref ->
+
+        // Setup each answer preference
+        for (keyRes in answerCommandKeys) {
+            val key = getString(keyRes)
+            val answerPref = findPreference<ReviewerControlPreference>(key)
+
+            answerPref?.let { pref ->
+                Timber.d("Setting up answer preference: ${pref.key}")
+
                 val items =
                     arrayOf(
                         getString(R.string.only_answer),
                         getString(R.string.flip_and_answer),
                     )
-                answerPref.setOnBindingSelectedListener { binding ->
+
+                // Remove any existing listener to avoid duplicates
+                pref.setOnBindingSelectedListener(null)
+
+                // Set new listener
+                pref.setOnBindingSelectedListener { binding ->
                     AlertDialog.Builder(requireContext()).show {
-                        setTitle(answerPref.title)
-                        setIcon(answerPref.icon)
+                        setTitle(pref.title)
+                        setIcon(pref.icon)
                         setItems(items) { _, index ->
                             when (index) {
-                                0 -> answerPref.addBinding(binding, CardSide.ANSWER)
+                                0 -> {
+                                    // Only answer side
+                                    pref.addBinding(binding, CardSide.ANSWER)
+                                }
                                 1 -> {
-                                    answerPref.addBinding(binding, CardSide.ANSWER)
+                                    // Flip and answer - add to both answer and question sides
+                                    pref.addBinding(binding, CardSide.ANSWER)
                                     showAnswerPref?.addBinding(binding, CardSide.QUESTION)
                                 }
                             }
@@ -235,7 +264,7 @@ class ControlsSettingsFragment :
                     }
                     true
                 }
-            }
+            } ?: Timber.w("Could not find answer preference with key: $key")
         }
     }
 

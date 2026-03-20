@@ -92,7 +92,7 @@ open class ReviewerControlPreference : ControlPreference {
 
     private var onBindingSelectedListener: OnBindingSelectedListener? = null
 
-    fun setOnBindingSelectedListener(listener: OnBindingSelectedListener) {
+    fun setOnBindingSelectedListener(listener: OnBindingSelectedListener?) {
         onBindingSelectedListener = listener
     }
 

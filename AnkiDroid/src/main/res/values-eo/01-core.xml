@@ -129,7 +129,7 @@
     <string name="empty_cram_label" maxLength="28">Malplenigi</string>
     <string name="create_subdeck">Krei subkartaron</string>
     <string name="empty_filtered_deck">Malplenigado de filtrita kartaro&#8230;</string>
-    <string name="search_deck" comment="Deck search for selecting it">Deck search</string>
+    <string name="search_deck" comment="Deck search for selecting it">Serĉi kartaron</string>
     <string name="empty_deck">Tiu ĉi kartaro estas malplena</string>
     <string name="invalid_deck_name">Malĝusta nomo por kartaro</string>
     <string name="studyoptions_congrats_finished">Gratulon! Vi finis la hodiaŭan lernadon.</string>
@@ -151,8 +151,8 @@
     <string name="card_template_editor_styling" maxLength="28">Stilo</string>
     <string name="card_template_editor_menu_card_browser_appearance" maxLength="28">Aspekto de kart-foliumilo</string>
     <string name="card_template_editor_deck_override" maxLength="28">Superskribi kartaron</string>
-    <string name="card_template_editor_insert_field" maxLength="28">Eniga kampo</string>
-    <string name="card_template_editor_select_field">Elekta kampo</string>
+    <string name="card_template_editor_insert_field" maxLength="28">Enmeti kampon</string>
+    <string name="card_template_editor_select_field">Elekti kampon</string>
     <string name="card_template_editor_cant_delete">Almenaŭ unu kartotipo estas postulata</string>
     <plurals name="card_template_editor_confirm_add">
         <item quantity="one">%1$d karto estos kreita. Ĉu pluigi?</item>
@@ -212,9 +212,9 @@
     <!-- Instant Note Editor -->
     <string name="instant_card" comment="Used in the Android system context menu/share dialog to quickly create a note. This does not need to be translated literally, translate the concept of quickly adding a Cloze note with a popup. ">Tuja karto</string>
     <!-- Internet Permissions -->
-    <string name="internet_access_title" comment="used for notifying user to unable internet access">Internet</string>
-    <string name="permission_access_summary">Required for the app to work</string>
-    <string name="permission_required_message">Please grant AnkiDroid the ‘%s’ permission to continue</string>
+    <string name="internet_access_title" comment="used for notifying user to unable internet access">Interreto</string>
+    <string name="permission_access_summary">Postulata de la aplikaĵo por funkcii</string>
+    <string name="permission_required_message">Donu al AnkiDroid la permeson “%s” por pluigi</string>
     <!-- Multiple profile -->
     <string name="add_profile">Aldoni profilon</string>
 </resources>

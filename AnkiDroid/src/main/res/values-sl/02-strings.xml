@@ -99,6 +99,10 @@
     <string name="webview_crash_loop_dialog_content">System WebView failed to render card \'%1$s\'.\n %2$s</string>
     <string name="slide_to_cancel" comment="Message shown when pressing the record button">Slide to cancel</string>
     <string name="filter_by_flags" maxLength="41">Oznaka</string>
+    <!-- filtered deck options -->
+    <string name="filtered_option_delay_again">Delay for again</string>
+    <string name="filtered_option_delay_hard">Delay for hard</string>
+    <string name="filtered_option_delay_good">Delay for good</string>
     <!-- Custom study options -->
     <string name="custom_study_loading_tags">Building list of tags&#8230;</string>
     <!-- Study options -->
@@ -394,4 +398,7 @@
     <string name="scheduler_upgrade_required_dialog_title" comment="Shown in a dialog when user has imported a collection using a very old version of the Anki spaced repetition scheduler">Scheduler upgrade required</string>
     <!-- Whitespace is OK -->
     <string name="list_separator" comment="The character and spacing to display between elements of a list, for example \', \' in \'Apple, Banana, Cherry" tools:ignore="TranslationTypo">, </string>
+    <!-- Other errors -->
+    <!-- Similar to TR.qtMiscNameExists(): "Name exists." -->
+    <string name="error_name_exists">Name already exists</string>
 </resources>

@@ -83,11 +83,13 @@
     <string name="restore_backup_choose_another">Boshqasini tanlash</string>
     <string name="dialog_cancel">Bekor qilish</string>
     <string name="dialog_ok">OK</string>
+    <string name="dialog_add" comment="Positive dialog action button label to add \'something\'">Add</string>
     <string name="dialog_confirm" tools:ignore="UnusedResources">Tasdiqlash</string>
     <string name="dialog_no">Yoʻq</string>
     <string name="dialog_yes">Ha</string>
     <string name="dialog_keep">Qoldirish</string>
     <string name="dialog_remove">Olib tashlash</string>
+    <string name="dialog_exit" comment="Label for a button which will exit/finish the current screen">Chiqish</string>
     <string name="dialog_continue">Davom etish</string>
     <string name="dialog_processing">Ishlamoqda&#8230;</string>
     <string name="dialog_positive_create" comment="Create a new collection, probably erasing the previous one, may be necessary in case of error.">Yaratish</string>
@@ -271,15 +273,15 @@
     <string name="error_no_changes_to_save">Saqlanadigan oʻzgarishlar yoʻq</string>
     <string name="choose_color">Rang tanlash</string>
     <!-- Special Fields -->
-    <string name="standard_fields_tab_header" comment="Tab header for inserting non-special fields: {{Front}}">Fields</string>
-    <string name="special_fields_tab_header" comment="Tab header for inserting special fields: {{Deck}}">Special</string>
+    <string name="standard_fields_tab_header" comment="Tab header for inserting non-special fields: {{Front}}">Maydonlar</string>
+    <string name="special_fields_tab_header" comment="Tab header for inserting special fields: {{Deck}}">Maxsus</string>
     <string name="special_field_example_suffix"><![CDATA[: ‘<b>%1$s</b>’]]></string>
-    <string name="special_field_front_side_help">The front template content. Audio is not automatically played</string>
-    <string name="special_field_deck_help">The full deck of the card, including parent decks%s</string>
-    <string name="special_field_subdeck_help">The current deck of the card, excluding parent decks%s</string>
-    <string name="special_field_card_flag_help">Outputs ‘%1$s’, where %2$s is the flag code (%3$d\–%4$d\)</string>
-    <string name="special_field_tags_help">The tags of the note%s</string>
-    <string name="special_field_card_id_help">The ID of the card%s</string>
-    <string name="special_field_card_help">The name of the card template%s</string>
-    <string name="special_field_type_help">The name of the note type%s</string>
+    <string name="special_field_front_side_help">Oldi shablon tarkibi. Audio avtomatik ravishda ijro etilmaydi.</string>
+    <string name="special_field_deck_help" comment="%s: either blank or \' %s\'">The full deck of the card, including parent decks%s</string>
+    <string name="special_field_subdeck_help" comment="%s: either blank or \' %s\'">The current deck of the card, excluding parent decks%s</string>
+    <string name="special_field_flag_help">Outputs ‘%1$s’, where %2$s is the flag code (%3$s\–%4$s\)</string>
+    <string name="special_field_tags_help" comment="%s: either blank or \' %s\'">Qayd teglari%s</string>
+    <string name="special_field_card_id_help" comment="%s: either blank or \' %s\'">Karta IDʼi%s</string>
+    <string name="special_field_card_help" comment="%s: either blank or \' %s\'">Karta shabloni nomi%s</string>
+    <string name="special_field_type_help" comment="%s: either blank or \' %s\'">Qayd turi nomi%s</string>
 </resources>

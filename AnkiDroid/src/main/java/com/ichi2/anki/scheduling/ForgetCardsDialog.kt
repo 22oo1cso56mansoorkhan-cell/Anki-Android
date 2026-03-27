@@ -118,7 +118,7 @@ class ForgetCardsDialog : DialogFragment() {
             titleWithHelpIcon(stringRes = R.string.reset_card_dialog_title) {
                 requireContext().openUrl(R.string.link_help_forget_cards)
             }
-            positiveButton(R.string.dialog_ok) {
+            positiveButton(R.string.reset) {
                 sharedPrefs.edit {
                     putBoolean(ARG_RESTORE_ORIGINAL, restoreOriginalPositionIfPossible)
                     putBoolean(ARG_RESET_REPETITION, resetRepetitionAndLapseCounts)

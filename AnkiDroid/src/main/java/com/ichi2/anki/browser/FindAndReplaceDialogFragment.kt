@@ -93,7 +93,7 @@ class FindAndReplaceDialogFragment : AnalyticsDialogFragment() {
                 customView(binding.root)
                 neutralButton(R.string.help) { openUrl(R.string.link_manual_browser_find_replace) }
                 negativeButton(R.string.dialog_cancel) { removeIdsFile() }
-                positiveButton(R.string.dialog_ok) { startFindReplace() }
+                positiveButton(R.string.dialog_positive_replace) { startFindReplace() }
             }.also { dialog ->
                 dialog.positiveButton.isEnabled = false
             }

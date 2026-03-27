@@ -99,6 +99,10 @@
     <string name="webview_crash_loop_dialog_content">AndroidシステムのWebViewがカード \'%1$s\' のレンダリングに失敗しました。\n %2$s</string>
     <string name="slide_to_cancel" comment="Message shown when pressing the record button">左にｽﾗｲﾄﾞでｷｬﾝｾﾙ</string>
     <string name="filter_by_flags" maxLength="41">フラグ</string>
+    <!-- filtered deck options -->
+    <string name="filtered_option_delay_again">Delay for again</string>
+    <string name="filtered_option_delay_hard">Delay for hard</string>
+    <string name="filtered_option_delay_good">Delay for good</string>
     <!-- Custom study options -->
     <string name="custom_study_loading_tags">タグのリストを作成しています&#8230;</string>
     <!-- Study options -->
@@ -205,7 +209,7 @@
     <string name="remove_wallpaper_image" maxLength="41">画像を背景から削除</string>
     <string name="remove_background_image">背景画像を削除しますか？</string>
     <!-- Card Template Browser Appearance -->
-    <string name="restore_default" maxLength="28">Restore default</string>
+    <string name="restore_default" maxLength="28">デフォルトに戻す</string>
     <string name="reviewer_tts_cloze_spoken_replacement">空白</string>
     <!-- Whiteboard eraser mode toggle message in Reviewer -->
     <string name="white_board_eraser_enabled">消しゴム機能をオンにしました</string>
@@ -238,9 +242,9 @@
     <string name="format_insert_bold">Format as bold</string>
     <string name="format_insert_italic">Format as italic</string>
     <string name="format_insert_underline">Format as underline</string>
-    <string name="insert_horizontal_line">Insert horizontal line</string>
+    <string name="insert_horizontal_line">横罫線を挿入する</string>
     <string name="insert_heading">Insert heading</string>
-    <string name="format_font_size">Change font size</string>
+    <string name="format_font_size">フォントサイズを変更</string>
     <string name="insert_mathjax">Insert MathJax equation</string>
     <string name="note_editor_toolbar_icon">ボタンに表示する文字</string>
     <string name="before_text">HTML before selection</string>
@@ -376,4 +380,7 @@
     <string name="scheduler_upgrade_required_dialog_title" comment="Shown in a dialog when user has imported a collection using a very old version of the Anki spaced repetition scheduler">スケジューラをアップグレードする必要があります</string>
     <!-- Whitespace is OK -->
     <string name="list_separator" comment="The character and spacing to display between elements of a list, for example \', \' in \'Apple, Banana, Cherry" tools:ignore="TranslationTypo">, </string>
+    <!-- Other errors -->
+    <!-- Similar to TR.qtMiscNameExists(): "Name exists." -->
+    <string name="error_name_exists">Name already exists</string>
 </resources>

@@ -31,7 +31,6 @@ import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import anki.collection.OpChanges
 import anki.collection.OpChangesWithCount
-import anki.config.ConfigKey
 import anki.search.BrowserColumns
 import anki.search.BrowserRow
 import com.ichi2.anki.ALL_DECKS_ID
@@ -51,6 +50,7 @@ import com.ichi2.anki.browser.FindAndReplaceDialogFragment.Companion.TAGS_AS_FIE
 import com.ichi2.anki.browser.RepositionCardsRequest.RepositionData
 import com.ichi2.anki.browser.search.SavedSearch
 import com.ichi2.anki.browser.search.SavedSearches
+import com.ichi2.anki.browser.search.SearchFilters
 import com.ichi2.anki.browser.search.SearchRequest
 import com.ichi2.anki.browser.search.SearchString
 import com.ichi2.anki.common.annotations.NeedsTest
@@ -80,6 +80,8 @@ import com.ichi2.anki.preferences.SharedPreferencesProvider
 import com.ichi2.anki.settings.Prefs
 import com.ichi2.anki.settings.PrefsRepository
 import com.ichi2.anki.utils.ext.currentCardBrowse
+import com.ichi2.anki.utils.ext.getCardOrNull
+import com.ichi2.anki.utils.ext.ignoreAccentsInSearch
 import com.ichi2.anki.utils.ext.setUserFlagForCards
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Job
@@ -482,7 +484,7 @@ class CardBrowserViewModel(
             }.launchIn(viewModelScope)
 
         viewModelScope.launch {
-            shouldIgnoreAccents = withCol { config.getBool(ConfigKey.Bool.IGNORE_ACCENTS_IN_SEARCH) }
+            shouldIgnoreAccents = withCol { config.ignoreAccentsInSearch }
 
             val initialDeckId = if (selectAllDecks) SelectableDeck.AllDecks else getInitialDeck()
             // PERF: slightly inefficient if the source was lastDeckId
@@ -661,14 +663,12 @@ class CardBrowserViewModel(
      */
     @NeedsTest("Deleting the focused row is properly handled;#18639")
     suspend fun deleteSelectedNotes(): Int {
-        // PERF: use `undoableOp(this)` & notify CardBrowser of changes
-        // this does a double search
         val cardIds = queryAllSelectedCardIds()
         // reset focused row if that row is about to be deleted
         if (focusedRow?.cardOrNoteId in cardIds) {
             focusedRow = null
         }
-        return undoableOp { removeNotes(cardIds = cardIds) }
+        return undoableOp(this@CardBrowserViewModel) { removeNotes(cardIds = cardIds) }
             .count
             .also {
                 endMultiSelectMode(SingleSelectCause.Other)
@@ -699,7 +699,7 @@ class CardBrowserViewModel(
         Timber.d("Setting ignore accent in search to: $value")
         viewModelScope.launch {
             shouldIgnoreAccents = value
-            withCol { config.setBool(ConfigKey.Bool.IGNORE_ACCENTS_IN_SEARCH, value) }
+            withCol { config.ignoreAccentsInSearch = value }
         }
     }
 
@@ -1119,13 +1119,15 @@ class CardBrowserViewModel(
         selectedTags: List<String>,
         cardState: CardStateFilter,
     ) {
-        val sb = StringBuilder(cardState.toSearch)
-        // join selectedTags as "tag:$tag" with " or " between them
-        val tagsConcat = selectedTags.joinToString(" or ") { tag -> "\"tag:$tag\"" }
-        if (selectedTags.isNotEmpty()) {
-            sb.append("($tagsConcat)") // Only if we added anything to the tag list
-        }
-        setFilterQuery(sb.toString())
+        val searchString =
+            withCol {
+                SearchRequest(
+                    query = cardState.toSearch,
+                    filters = SearchFilters.EMPTY.copy(tags = selectedTags),
+                ).toSearchString()
+            }.getOrThrow()
+
+        setFilterQuery(searchString.value)
     }
 
     /** Previewing */
@@ -1236,7 +1238,6 @@ class CardBrowserViewModel(
      * @see com.ichi2.anki.searchForRows
      */
     @NeedsTest("Invalid searches are handled. For instance: 'and'")
-    @NeedsTest("card id is scrolled")
     fun launchSearchForCards(cardOrNoteIdsToSelect: List<CardOrNoteId> = emptyList()) {
         if (!initCompleted) return
 
@@ -1263,17 +1264,17 @@ class CardBrowserViewModel(
                 }
 
             viewModelScope.launch {
+                val targetId = cardIdToBeScrolledTo ?: return@launch
                 searchJob?.join()
-                cardIdToBeScrolledTo?.let { targetId ->
-                    val rowId =
-                        if (cardsOrNotes == CARDS) {
-                            CardOrNoteId(targetId)
-                        } else {
-                            val nid = withCol { getCard(targetId) }.nid
-                            CardOrNoteId(nid)
-                        }
-                    flowOfScrollRequest.emit(RowSelection(rowId, topOffset = 0))
-                }
+                cardIdToBeScrolledTo = null
+                // validate targetId, even if in cards mode
+                val card =
+                    withCol { getCardOrNull(targetId) } ?: run {
+                        Timber.w("Unable to find card %d", targetId)
+                        return@launch
+                    }
+                val rowId = CardOrNoteId.fromCard(card, cardsOrNotes)
+                flowOfScrollRequest.emit(RowSelection(rowId, topOffset = 0))
             }
         }
     }

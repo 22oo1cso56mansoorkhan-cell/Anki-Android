@@ -37,18 +37,6 @@ class LayoutPrefixDetector : LayoutDetector() {
     ) {
         val layoutFileName = context.file.name
 
-        // TODO: decide on this to enforce or fix
-        // undecided(?): "item_" prefix for layouts used by items in an adapter => item_locale.xml
-        if (layoutFileName.startsWith("item_")) return
-
-        // TODO: decide on this to enforce or fix
-        // undecided(?): "include_" prefix for layouts that will be included in other layouts => include_toolbar.xml
-        if (layoutFileName.startsWith("include_")) return
-
-        // TODO: decide on this to enforce or fix
-        // undecided(?): "widget_" prefix for layouts that will be used by widgets => widget_card_analysis.xml
-        if (layoutFileName.startsWith("widget_")) return
-
         // TODO: fix these and remove this check
         if (layoutFileName in TEMPORARILY_IGNORED) return
 
@@ -88,7 +76,18 @@ class LayoutPrefixDetector : LayoutDetector() {
             )
 
         val ENFORCED_PREFIXES =
-            listOf("activity_", "fragment_", "dialog_", "view_")
+            listOf(
+                "activity_",
+                "fragment_",
+                "dialog_",
+                "view_",
+                // prefix for layouts that will be included in other layouts
+                "include_",
+                // layouts used by items in an adapter => item_locale.xml
+                "item_",
+                // layouts used by widgets
+                "widget_",
+            )
 
         /**
          * TODO Go over the entries in the list and fix. Some of the files require further
@@ -100,52 +99,35 @@ class LayoutPrefixDetector : LayoutDetector() {
                 "add_edit_reminder_dialog.xml",
                 "alert_dialog_checkbox.xml",
                 "alert_dialog_title_with_help.xml",
-                "anki_progress.xml",
                 "bottomsheet_multimedia.xml",
                 "browser_column_cell.xml",
                 "browser_column_heading.xml",
                 "browser_columns_selection.xml",
-                "browser_columns_selection_entry.xml",
-                "browser_columns_selection_heading.xml",
-                "button_color_brush.xml",
                 "card_browser_appearance.xml",
                 "card_browser_fragment.xml",
-                "card_browser_item_my_searches_dialog.xml",
                 "card_browser_searchview_fragment.xml",
-                "card_item_browser.xml",
                 "card_template_editor.xml",
                 "card_template_editor_item.xml",
-                "card_template_editor_main.xml",
-                "card_template_editor_top.xml",
                 "change_note_type_dialog.xml",
                 "check_pronunciation_fragment.xml",
                 "colorpicker_flag_bubble.xml",
                 "control_preference.xml",
-                "control_preference_list_item.xml",
                 "controls_tab_layout.xml",
-                "deck_item.xml",
                 "deck_picker.xml",
-                "deck_picker_dialog_list_item.xml",
                 "drawing_fragment.xml",
-                "edit_flag_item.xml",
                 "extended_category.xml",
                 "feedback.xml",
                 "floating_add_button.xml",
-                "grade_now_list_item.xml",
                 "image_occlusion.xml",
                 "info.xml",
                 "internet_permission_fragment.xml",
                 "instant_editor_field_layout.xml",
                 "introduction_activity.xml",
                 "introduction_layout.xml",
-                "locale_dialog_fragment_textview.xml",
                 "locale_selection_dialog.xml",
-                "material_dialog_list_item.xml",
-                "multiline_spinner_item.xml",
                 "my_account.xml",
                 "my_account_logged_in.xml",
                 "navdrawer_header.xml",
-                "navigation_drawer.xml",
                 "navigation_drawer_layout.xml",
                 "navigation_drawer_layout_fullscreen.xml",
                 "note_editor_fragment.xml",
@@ -171,18 +153,9 @@ class LayoutPrefixDetector : LayoutDetector() {
                 "resizing_divider_internal.xml",
                 "reviewer.xml",
                 "reviewer2.xml",
-                "reviewer_answer_buttons.xml",
-                "reviewer_flashcard.xml",
                 "reviewer_flashcard_fullscreen.xml",
-                "reviewer_flashcard_fullscreen_noanswers.xml",
                 "reviewer_fullscreen.xml",
                 "reviewer_fullscreen_noanswers.xml",
-                "reviewer_menu_display_type.xml",
-                "reviewer_menu_item.xml",
-                "reviewer_mic_tool_bar.xml",
-                "reviewer_topbar.xml",
-                "reviewer_whiteboard_editor.xml",
-                "schedule_reminders_list_item.xml",
                 "set_due_date_range.xml",
                 "set_due_date_single.xml",
                 "single_fragment_activity.xml",
@@ -192,10 +165,7 @@ class LayoutPrefixDetector : LayoutDetector() {
                 "studyoptions_fragment.xml",
                 "sync_progress_layout.xml",
                 "tab_layout_icon_on_end.xml",
-                "tags_dialog_title.xml",
-                "tags_item_list_dialog.xml",
                 "template_previewer_container.xml",
-                "toolbar.xml",
             )
     }
 }

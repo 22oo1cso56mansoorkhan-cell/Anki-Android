@@ -142,6 +142,7 @@ import com.ichi2.anki.dialogs.customstudy.CustomStudyDialog
 import com.ichi2.anki.dialogs.customstudy.CustomStudyDialog.CustomStudyAction
 import com.ichi2.anki.dialogs.customstudy.CustomStudyDialog.CustomStudyAction.Companion.REQUEST_KEY
 import com.ichi2.anki.export.ExportDialogFragment
+import com.ichi2.anki.filtered.FilteredDeckOptionsFragment
 import com.ichi2.anki.introduction.CollectionPermissionScreenLauncher
 import com.ichi2.anki.introduction.hasCollectionStoragePermissions
 import com.ichi2.anki.libanki.DeckId
@@ -158,7 +159,6 @@ import com.ichi2.anki.preferences.AdvancedSettingsFragment
 import com.ichi2.anki.preferences.PreferencesActivity
 import com.ichi2.anki.preferences.sharedPrefs
 import com.ichi2.anki.receiver.SdCardReceiver
-import com.ichi2.anki.servicelayer.PreferenceUpgradeService
 import com.ichi2.anki.servicelayer.ScopedStorageService
 import com.ichi2.anki.settings.Prefs
 import com.ichi2.anki.snackbar.BaseSnackbarBuilderProvider
@@ -1419,17 +1419,7 @@ open class DeckPicker :
     }
 
     fun showCreateFilteredDeckDialog() {
-        val createFilteredDeckDialog =
-            CreateDeckDialog(this@DeckPicker, R.string.new_deck, CreateDeckDialog.DeckDialogType.FILTERED_DECK, null)
-        createFilteredDeckDialog.onNewDeckCreated = { deckId ->
-            // a filtered deck was created
-            viewModel.openDeckOptions(deckId, isFiltered = true)
-        }
-        launchCatchingTask {
-            withProgress {
-                createFilteredDeckDialog.showFilteredDeckDialog()
-            }
-        }
+        startActivity(FilteredDeckOptionsFragment.getIntent(this))
     }
 
     fun exportCollection() {

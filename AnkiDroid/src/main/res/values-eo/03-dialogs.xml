@@ -83,11 +83,13 @@
     <string name="restore_backup_choose_another">Elekti alian</string>
     <string name="dialog_cancel">Nuligi</string>
     <string name="dialog_ok">Bone</string>
+    <string name="dialog_add" comment="Positive dialog action button label to add \'something\'">Add</string>
     <string name="dialog_confirm" tools:ignore="UnusedResources">Konfirmi</string>
     <string name="dialog_no">Ne</string>
     <string name="dialog_yes">Jes</string>
     <string name="dialog_keep">Konservi</string>
     <string name="dialog_remove">Forigi</string>
+    <string name="dialog_exit" comment="Label for a button which will exit/finish the current screen">Eliri</string>
     <string name="dialog_continue">Pluigi</string>
     <string name="dialog_processing">Traktado&#8230;</string>
     <string name="dialog_positive_create" comment="Create a new collection, probably erasing the previous one, may be necessary in case of error.">Krei</string>
@@ -271,15 +273,15 @@
     <string name="error_no_changes_to_save">Neniu ŝanĝo por konservi</string>
     <string name="choose_color">Elekti koloron</string>
     <!-- Special Fields -->
-    <string name="standard_fields_tab_header" comment="Tab header for inserting non-special fields: {{Front}}">Fields</string>
-    <string name="special_fields_tab_header" comment="Tab header for inserting special fields: {{Deck}}">Special</string>
+    <string name="standard_fields_tab_header" comment="Tab header for inserting non-special fields: {{Front}}">Kampoj</string>
+    <string name="special_fields_tab_header" comment="Tab header for inserting special fields: {{Deck}}">Specialaj</string>
     <string name="special_field_example_suffix"><![CDATA[: ‘<b>%1$s</b>’]]></string>
-    <string name="special_field_front_side_help">The front template content. Audio is not automatically played</string>
-    <string name="special_field_deck_help">The full deck of the card, including parent decks%s</string>
-    <string name="special_field_subdeck_help">The current deck of the card, excluding parent decks%s</string>
-    <string name="special_field_card_flag_help">Outputs ‘%1$s’, where %2$s is the flag code (%3$d\–%4$d\)</string>
-    <string name="special_field_tags_help">The tags of the note%s</string>
-    <string name="special_field_card_id_help">The ID of the card%s</string>
-    <string name="special_field_card_help">The name of the card template%s</string>
-    <string name="special_field_type_help">The name of the note type%s</string>
+    <string name="special_field_front_side_help">Enhavo de fronta ŝablono. Sono ne estos aŭtomate ludata.</string>
+    <string name="special_field_deck_help" comment="%s: either blank or \' %s\'">La plena kartaro de la karto, ampleksante superajn kartarojn%s</string>
+    <string name="special_field_subdeck_help" comment="%s: either blank or \' %s\'">La nuna kartaro de la karto, ekskluzivante superajn kartarojn%s</string>
+    <string name="special_field_flag_help">Outputs ‘%1$s’, where %2$s is the flag code (%3$s\–%4$s\)</string>
+    <string name="special_field_tags_help" comment="%s: either blank or \' %s\'">Etikedoj por la noto%s</string>
+    <string name="special_field_card_id_help" comment="%s: either blank or \' %s\'">Identigilo de la karto%s</string>
+    <string name="special_field_card_help" comment="%s: either blank or \' %s\'">Nomo de ŝablono de la karto%s</string>
+    <string name="special_field_type_help" comment="%s: either blank or \' %s\'">Nomo de la nototipo%s</string>
 </resources>

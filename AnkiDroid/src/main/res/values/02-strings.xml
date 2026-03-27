@@ -87,6 +87,11 @@
 
     <string name="filter_by_flags" maxLength="41">Flags</string>
 
+    <!-- filtered deck options -->
+    <string name="filtered_option_delay_again">Delay for again</string>
+    <string name="filtered_option_delay_hard">Delay for hard</string>
+    <string name="filtered_option_delay_good">Delay for good</string>
+
     <!-- Custom study options -->
     <string name="custom_study_loading_tags">Building list of tags&#8230;</string>
     <!-- Study options -->
@@ -450,5 +455,9 @@ opening the system text to speech settings fails">Failed to open text to speech 
 
     <!-- Whitespace is OK -->
     <string name="list_separator" comment="The character and spacing to display between elements of a list, for example ', ' in 'Apple, Banana, Cherry" tools:ignore="TranslationTypo">, </string>
+
+    <!-- Other errors -->
+    <!-- Similar to TR.qtMiscNameExists(): "Name exists." -->
+    <string name="error_name_exists">Name already exists</string>
 </resources>
 

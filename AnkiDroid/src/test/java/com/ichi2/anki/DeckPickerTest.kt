@@ -6,7 +6,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
-import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.widget.TextView
@@ -43,7 +42,6 @@ import com.ichi2.testutils.common.Flaky
 import com.ichi2.testutils.common.OS
 import com.ichi2.testutils.ext.addBasicNoteWithOp
 import com.ichi2.testutils.ext.menu
-import com.ichi2.testutils.grantPermissions
 import com.ichi2.testutils.grantWritePermissions
 import com.ichi2.testutils.revokeWritePermissions
 import com.ichi2.testutils.withDeniedPermissions
@@ -455,7 +453,7 @@ class DeckPickerTest : RobolectricTest() {
 
             // select deck options for a dynamic deck
             val deckOptionsDynamic = selectContextMenuOptionForActivity(DeckPickerContextMenuOption.DECK_OPTIONS, didDynamicA)
-            assertEquals("com.ichi2.anki.FilteredDeckOptions", deckOptionsDynamic.component!!.className)
+            assertEquals("com.ichi2.anki.utils.ConfigAwareSingleFragmentActivity", deckOptionsDynamic.component!!.className)
             onBackPressedDispatcher.onBackPressed()
 
             Prefs.newReviewRemindersEnabled = true

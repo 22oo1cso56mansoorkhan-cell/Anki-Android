@@ -81,11 +81,13 @@
     <string name="restore_backup_choose_another">他を選択</string>
     <string name="dialog_cancel">キャンセル</string>
     <string name="dialog_ok">OK</string>
+    <string name="dialog_add" comment="Positive dialog action button label to add \'something\'">Add</string>
     <string name="dialog_confirm" tools:ignore="UnusedResources">確認</string>
     <string name="dialog_no">いいえ</string>
     <string name="dialog_yes">はい</string>
     <string name="dialog_keep">維持</string>
     <string name="dialog_remove">削除</string>
+    <string name="dialog_exit" comment="Label for a button which will exit/finish the current screen">Exit</string>
     <string name="dialog_continue">続行</string>
     <string name="dialog_processing">処理中です&#8230;</string>
     <string name="dialog_positive_create" comment="Create a new collection, probably erasing the previous one, may be necessary in case of error.">作成</string>
@@ -247,9 +249,9 @@
     <string name="tts_error_dialog_change_button_text">エンジンを変更</string>
     <string name="tts_error_dialog_supported_voices_button_text">読み上げオプション</string>
     <!-- import_cache_error_resolutions -->
-    <string name="import_error_resolution_try_again">Re-import the file</string>
-    <string name="import_error_resolution_free_up_space">Ensure there is sufficient free space on your device</string>
-    <string name="import_error_resolution_check_internet">Ensure you are connected to the internet</string>
+    <string name="import_error_resolution_try_again">もう一度ファイルをインポートしてください</string>
+    <string name="import_error_resolution_free_up_space">あなたのデバイスに十分な空きがあることを確認してください</string>
+    <string name="import_error_resolution_check_internet">インターネットに接続されていることを確認してください</string>
     <string name="import_error_resolution_copy_to_device">Copy the file to your device and try again with the local file</string>
     <string name="import_error_resolution_select_file">Open the file using your device’s file browser app</string>
     <!-- Post-login dialog -->
@@ -267,11 +269,11 @@
     <string name="special_fields_tab_header" comment="Tab header for inserting special fields: {{Deck}}">Special</string>
     <string name="special_field_example_suffix"><![CDATA[: ‘<b>%1$s</b>’]]></string>
     <string name="special_field_front_side_help">The front template content. Audio is not automatically played</string>
-    <string name="special_field_deck_help">The full deck of the card, including parent decks%s</string>
-    <string name="special_field_subdeck_help">The current deck of the card, excluding parent decks%s</string>
-    <string name="special_field_card_flag_help">Outputs ‘%1$s’, where %2$s is the flag code (%3$d\–%4$d\)</string>
-    <string name="special_field_tags_help">The tags of the note%s</string>
-    <string name="special_field_card_id_help">The ID of the card%s</string>
-    <string name="special_field_card_help">The name of the card template%s</string>
-    <string name="special_field_type_help">The name of the note type%s</string>
+    <string name="special_field_deck_help" comment="%s: either blank or \' %s\'">The full deck of the card, including parent decks%s</string>
+    <string name="special_field_subdeck_help" comment="%s: either blank or \' %s\'">The current deck of the card, excluding parent decks%s</string>
+    <string name="special_field_flag_help">Outputs ‘%1$s’, where %2$s is the flag code (%3$s\–%4$s\)</string>
+    <string name="special_field_tags_help" comment="%s: either blank or \' %s\'">The tags of the note%s</string>
+    <string name="special_field_card_id_help" comment="%s: either blank or \' %s\'">The ID of the card%s</string>
+    <string name="special_field_card_help" comment="%s: either blank or \' %s\'">The name of the card template%s</string>
+    <string name="special_field_type_help" comment="%s: either blank or \' %s\'">The name of the note type%s</string>
 </resources>

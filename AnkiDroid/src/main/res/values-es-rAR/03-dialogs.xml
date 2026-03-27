@@ -83,11 +83,13 @@
     <string name="restore_backup_choose_another">Elige otro</string>
     <string name="dialog_cancel">Cancelar</string>
     <string name="dialog_ok">OK</string>
+    <string name="dialog_add" comment="Positive dialog action button label to add \'something\'">Add</string>
     <string name="dialog_confirm" tools:ignore="UnusedResources">Confirmar</string>
     <string name="dialog_no">No</string>
     <string name="dialog_yes">Sí</string>
     <string name="dialog_keep">Conservar</string>
     <string name="dialog_remove">Quitar</string>
+    <string name="dialog_exit" comment="Label for a button which will exit/finish the current screen">Exit</string>
     <string name="dialog_continue">Continuar</string>
     <string name="dialog_processing">Procesando&#8230;</string>
     <string name="dialog_positive_create" comment="Create a new collection, probably erasing the previous one, may be necessary in case of error.">Crear</string>
@@ -261,8 +263,8 @@
     <string name="import_error_resolution_copy_to_device">Copia el archivo a tu dispositivo e inténtalo de nuevo con el archivo local</string>
     <string name="import_error_resolution_select_file">Abre el archivo usando la aplicación del navegador de archivos de tu dispositivo</string>
     <!-- Post-login dialog -->
-    <string name="login_successful">Login successful</string>
-    <string name="sync_now">Sync now?</string>
+    <string name="login_successful">Sesión iniciada correctamente</string>
+    <string name="sync_now">¿Sincronizar ahora?</string>
     <!--Change Note Type Dialog Fragment-->
     <string name="card_numbers_unchanged">Card numbers will remain unchanged</string>
     <!-- Subset of TR.changeNotetypeToFromCloze -->
@@ -275,11 +277,11 @@
     <string name="special_fields_tab_header" comment="Tab header for inserting special fields: {{Deck}}">Special</string>
     <string name="special_field_example_suffix"><![CDATA[: ‘<b>%1$s</b>’]]></string>
     <string name="special_field_front_side_help">The front template content. Audio is not automatically played</string>
-    <string name="special_field_deck_help">The full deck of the card, including parent decks%s</string>
-    <string name="special_field_subdeck_help">The current deck of the card, excluding parent decks%s</string>
-    <string name="special_field_card_flag_help">Outputs ‘%1$s’, where %2$s is the flag code (%3$d\–%4$d\)</string>
-    <string name="special_field_tags_help">The tags of the note%s</string>
-    <string name="special_field_card_id_help">The ID of the card%s</string>
-    <string name="special_field_card_help">The name of the card template%s</string>
-    <string name="special_field_type_help">The name of the note type%s</string>
+    <string name="special_field_deck_help" comment="%s: either blank or \' %s\'">The full deck of the card, including parent decks%s</string>
+    <string name="special_field_subdeck_help" comment="%s: either blank or \' %s\'">The current deck of the card, excluding parent decks%s</string>
+    <string name="special_field_flag_help">Outputs ‘%1$s’, where %2$s is the flag code (%3$s\–%4$s\)</string>
+    <string name="special_field_tags_help" comment="%s: either blank or \' %s\'">The tags of the note%s</string>
+    <string name="special_field_card_id_help" comment="%s: either blank or \' %s\'">The ID of the card%s</string>
+    <string name="special_field_card_help" comment="%s: either blank or \' %s\'">The name of the card template%s</string>
+    <string name="special_field_type_help" comment="%s: either blank or \' %s\'">The name of the note type%s</string>
 </resources>
